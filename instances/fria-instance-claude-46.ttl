@@ -1,0 +1,280 @@
+@prefix fria: <http://www.example.org/fria-report> .
+@prefix airo: <https://w3id.org/airo#> .
+@prefix vair: <https://w3id.org/vair#> .
+@prefix cids: <http://www.example.org/cids#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+fria:Amazon-One-Palmprint-Biometrics-Report a fria:FRIA-report ;
+    fria:hasReportName "Amazon One palmprint biometric opacity" ;
+    fria:hasOrganisationPositionDescription "Palm print scanning" ;
+    fria:hasContributorDetails "Amazon, TechCrunch, Albert Fox Cahn" ;
+    fria:hasAssessmentContent "Amazon offers customers $10 for their palmprints when signing up for Amazon One, a contactless ID and transaction service. Despite promises of data security, some palm data is used anonymously to improve the system, raising concerns about potential commercial and other uses." ;
+    fria:hasTechnologyAndDataDescription "Palm scanning hardware captures minute characteristics of palm, including surface-area details and subcutaneous features, to create a palm signature stored in the cloud." ;
+    fria:hasPurposesAndContextDescription "Verify identity; Authorise transactions" ;
+    fria:reportDate "2021-08-02"^^xsd:date ;
+    fria:hasAIAAICLink "https://www.aiaaic.org/aiaaic-repository/ai-algorithmic-and-automation-incidents/amazon-one-palmprint-biometrics" .
+
+fria:FRIA-reportChallenge1 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportChallenge ;
+    rdfs:comment "Presumption of innocence and right to an effective remedy and to a fair trial." .
+
+fria:FRIA-reportEvaluation11 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "Amazon One does not clearly communicate to users that their palm print data may be used for purposes beyond identity verification and transaction authorization." .
+
+fria:FRIA-reportImpactLevel11 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge11 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation11 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel11 ;
+    rdfs:comment "The AI system does not communicate that a decision/advice or outcome is the result of an algorithmic decision." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 ;
+    owl:equivalentClass airo:Transparency, vair:OperatingCriticalDigitalInfrastructure .
+
+fria:FRIA-reportEvaluation12 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The system does not provide clear information about the accuracy or potential errors in palm print recognition." .
+
+fria:FRIA-reportImpactLevel12 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Medium" .
+
+fria:FRIA-reportChallenge12 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation12 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel12 ;
+    rdfs:comment "The AI system does not provide percentages or other indication on the degree of likelihood that the outcome is correct/incorrect, prejudicing the user that there is no possibility of error and therefore that the outcome is undoubtedly incriminating." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 .
+
+fria:FRIA-reportEvaluation13 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The palm print system presents its results as absolute, potentially making it difficult for users to challenge any errors or misidentifications." .
+
+fria:FRIA-reportImpactLevel13 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge13 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation13 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel13 ;
+    rdfs:comment "The AI system produces an outcome that forces a reversal of burden of proof upon the suspect, by presenting itself as an absolute truth, practically depriving the defence of any chance to counter it." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 ;
+    owl:equivalentClass vair:DetectingEmotionalState .
+
+fria:FRIA-reportEvaluation14 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There is no clear explanation of how the palm print data is used to improve the system or for other potential commercial uses." .
+
+fria:FRIA-reportImpactLevel14 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Very High" .
+
+fria:FRIA-reportChallenge14 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation14 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel14 ;
+    rdfs:comment "There is no explanation of reasons and criteria behind a certain output of the AI system that the user can understand." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 .
+
+fria:FRIA-reportEvaluation15 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The extent to which palm print data influences other Amazon services or decision-making processes is not clearly communicated." .
+
+fria:FRIA-reportImpactLevel15 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge15 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation15 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel15 ;
+    rdfs:comment "There is no indication of the extent to which the AI system influences the overall decision-making process." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 .
+
+fria:FRIA-reportEvaluation16 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There are no clear measures for users to seek redress or compensation if their palm print data is misused or compromised." .
+
+fria:FRIA-reportImpactLevel16 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Very High" .
+
+fria:FRIA-reportChallenge16 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation16 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel16 ;
+    rdfs:comment "There is no set of measures that allow for redress in case of the occurrence of any harm or adverse impact." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 ;
+    owl:equivalentClass vair:InsurancePricing .
+
+fria:FRIA-reportChallenge2 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportChallenge ;
+    rdfs:comment "Right to Right to equality and non-discrimination." .
+
+fria:FRIA-reportEvaluation21 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The palm print system may disproportionately affect certain groups, such as those with hand disabilities or injuries." .
+
+fria:FRIA-reportImpactLevel21 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Medium" .
+
+fria:FRIA-reportChallenge21 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation21 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel21 ;
+    rdfs:comment "The AI system targets members of a specific social group." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge2 ;
+    owl:equivalentClass airo:PrivateService, vair:ControllingSafetyOfRoadTrafficManagement .
+
+fria:FRIA-reportEvaluation22 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There are no apparent mechanisms to identify and correct biases in the palm print recognition system." .
+
+fria:FRIA-reportImpactLevel22 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge22 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation22 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel22 ;
+    rdfs:comment "There are no mechanisms to flag and correct issues related to bias, discrimination, or poor performance." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge2 .
+
+fria:FRIA-reportEvaluation23 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The system does not appear to consider the diversity of palm prints across different demographics or potential challenges for certain populations." .
+
+fria:FRIA-reportImpactLevel23 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Medium" .
+
+fria:FRIA-reportChallenge23 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation23 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel23 ;
+    rdfs:comment "The AI system does not consider the diversity and representativeness for specific population or problematic use cases." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge2 .
+
+fria:FRIA-reportChallenge3 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportChallenge ;
+    rdfs:comment "Freedom of expression and information." .
+
+fria:FRIA-reportEvaluation31 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The use of palm print biometrics may inhibit individuals' freedom of movement and anonymity in physical spaces." .
+
+fria:FRIA-reportImpactLevel31 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge31 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation31 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel31 ;
+    rdfs:comment "There is no mechanism to limit the deployment of the AI system to suspected individuals." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge3 .
+
+fria:FRIA-reportEvaluation32 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The palm print data collected and stored by Amazon is not easily accessible to users for review or verification." .
+
+fria:FRIA-reportImpactLevel32 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge32 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation32 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel32 ;
+    rdfs:comment "The data stored, recorded, and produced are not easily accessible to concerned individuals." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge3 .
+
+fria:FRIA-reportChallenge4 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportChallenge ;
+    rdfs:comment "Right to respect for private and family life and right to protection of personal data." .
+
+fria:FRIA-reportEvaluation41 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "Users have limited control over their palm print data once it is collected by Amazon, with data potentially being used for system improvements and other undisclosed purposes." .
+
+fria:FRIA-reportImpactLevel41 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Very High" .
+
+fria:FRIA-reportChallenge41 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation41 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel41 ;
+    rdfs:comment "There are no mechanisms for the user to exercise control over the processing of personal data." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 .
+
+fria:FRIA-reportEvaluation42 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There are no clear measures to ensure the lawful processing of palm print data, especially concerning its use for system improvements and potential commercial applications." .
+
+fria:FRIA-reportImpactLevel42 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Very High" .
+
+fria:FRIA-reportChallenge42 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation42 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel42 ;
+    rdfs:comment "There are no measures to ensure the lawfulness of the processing of personal data." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass airo:PublicService .
+
+fria:FRIA-reportEvaluation43 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There are no apparent procedures to limit access to palm print data or to ensure data minimization in its use for system improvements." .
+
+fria:FRIA-reportImpactLevel43 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge43 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation43 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel43 ;
+    rdfs:comment "There are no procedures to limit the access to personal data and to the extent and amount necessary for those purposes." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass airo:Managing .
+
+fria:FRIA-reportEvaluation44 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "While Amazon allows users to delete their palm print data, the process and implications of doing so are not clearly explained." .
+
+fria:FRIA-reportImpactLevel44 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge44 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation44 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel44 ;
+    rdfs:comment "There is no mechanism allowing to comply with the exercise of data subject's rights (access, rectification and erasure of data relating to a specific individual)." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 .
+
+fria:FRIA-reportEvaluation45 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "While Amazon claims to use encryption and secure zones, specific measures to protect palm print data are not fully disclosed." .
+
+fria:FRIA-reportImpactLevel45 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge45 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation45 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel45 ;
+    rdfs:comment "There are no specific measures in place to enhance the security of the processing of personal data (via encryption, anonymisation and aggregation)." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass vair:ApplyingTheLawToFacts .
+
+fria:FRIA-reportEvaluation46 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There is no evidence of a comprehensive data protection impact assessment being conducted for the Amazon One palm print system." .
+
+fria:FRIA-reportImpactLevel46 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Very High" .
+
+fria:FRIA-reportChallenge46 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation46 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel46 ;
+    rdfs:comment "There is no procedure to conduct a data protection impact assessment." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass airo:Monitoring .

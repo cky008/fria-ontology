@@ -1,0 +1,119 @@
+@prefix fria: <http://www.example.org/fria-report> .
+@prefix airo: <https://w3id.org/airo#> .
+@prefix vair: <https://w3id.org/vair#> .
+@prefix cids: <http://www.example.org/cids#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+fria:FRIA-report-agricultural-bank-of-china-facial-recognition a fria:FRIA-report ;
+    fria:hasReportName "Agricultural Bank of China facial recognition age bias" ;
+    fria:hasOrganisationPositionDescription "Agricultural Bank of China (ABC), a major Chinese bank" ;
+    fria:hasContributorDetails "Agricultural Bank of China, elderly customers" ;
+    fria:hasAssessmentContent "A video emerged showing people lifting a 94-year-old woman to use an ATM's facial recognition system in Guangshui, Hubei province, China. The incident highlighted age bias in the bank's facial recognition technology, causing public outcry and calls for more inclusive design for elderly users." ;
+    fria:hasTechnologyAndDataDescription "Facial recognition technology for identity verification at ATMs" ;
+    fria:hasPurposesAndContextDescription "To verify customer identity for activating social security cards and accessing bank services" ;
+    fria:reportDate "2023-10-10"^^xsd:date ;
+    fria:hasAIAAICLink "https://www.aiaaic.org/aiaaic-repository/ai-algorithmic-and-automation-incidents/agricultural-bank-of-china-facial-recognition-age-bias" .
+
+fria:FRIA-reportChallenge11 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation11 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel11 ;
+    rdfs:comment "The AI system does not communicate that a decision/advice or outcome is the result of an algorithmic decision" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 ;
+    owl:equivalentClass airo:Transparency, vair:OperatingCriticalDigitalInfrastructure .
+
+fria:FRIA-reportEvaluation11 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The facial recognition system at the ATM likely did not clearly communicate to users that their identity verification was being processed algorithmically, which could lead to confusion, especially for elderly users." .
+
+fria:FRIA-reportImpactLevel11 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Medium" .
+
+fria:FRIA-reportChallenge12 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation12 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel12 ;
+    rdfs:comment "The AI system does not provide percentages or other indication on the degree of likelihood that the outcome is correct/incorrect, prejudicing the user that there is no possibility of error and therefore that the outcome is undoubtedly incriminating" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 .
+
+fria:FRIA-reportEvaluation12 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There is no information about the system providing confidence levels or error rates for its facial recognition matches, which could lead to unquestioned acceptance of potentially inaccurate results, especially for elderly users." .
+
+fria:FRIA-reportImpactLevel12 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge13 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation13 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel13 ;
+    rdfs:comment "The AI system produces an outcome that forces a reversal of burden of proof upon the suspect, by presenting itself as an absolute truth, practically depriving the defence of any chance to counter it" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 ;
+    owl:equivalentClass vair:DetectingEmotionalState .
+
+fria:FRIA-reportEvaluation13 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The facial recognition system's failure to recognize the elderly woman puts the burden on her to prove her identity through extraordinary means (being lifted), rather than the system adapting to her needs." .
+
+fria:FRIA-reportImpactLevel13 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Very High" .
+
+fria:FRIA-reportChallenge21 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation21 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel21 ;
+    rdfs:comment "The AI system targets members of a specific social group" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge2 ;
+    owl:equivalentClass airo:PrivateService, vair:ControllingSafetyOfRoadTrafficManagement .
+
+fria:FRIA-reportEvaluation21 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The facial recognition system shows clear bias against elderly users, particularly those with limited mobility, effectively discriminating against this demographic in accessing essential financial services." .
+
+fria:FRIA-reportImpactLevel21 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Very High" .
+
+fria:FRIA-reportChallenge31 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation31 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel31 ;
+    rdfs:comment "There is no mechanism to limit the deployment of the AI system to suspected individuals" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge3 .
+
+fria:FRIA-reportEvaluation31 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The facial recognition system is deployed universally for all ATM users, without consideration for those who might have difficulty using it, such as elderly or disabled individuals." .
+
+fria:FRIA-reportImpactLevel31 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge41 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation41 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel41 ;
+    rdfs:comment "There are no mechanisms for the user to exercise control over the processing of personal data" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 .
+
+fria:FRIA-reportEvaluation41 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There is no mention of alternative identification methods or opt-out options for users who cannot use the facial recognition system, limiting user control over their personal data and access to services." .
+
+fria:FRIA-reportImpactLevel41 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge45 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation45 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel45 ;
+    rdfs:comment "There are no specific measures in place to enhance the security of the processing of personal data (via encryption, anonymisation and aggregation)" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass vair:ApplyingTheLawToFacts .
+
+fria:FRIA-reportEvaluation45 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The report does not mention any specific security measures for protecting the biometric data collected by the facial recognition system at ATMs." .
+
+fria:FRIA-reportImpactLevel45 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Medium" .
+
+fria:FRIA-reportChallenge46 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation46 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel46 ;
+    rdfs:comment "There is no procedure to conduct a data protection impact assessment" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass airo:Monitoring .
+
+fria:FRIA-reportEvaluation46 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There is no mention of the Agricultural Bank of China conducting a data protection impact assessment for its facial recognition system, which could have identified potential issues for elderly users." .
+
+fria:FRIA-reportImpactLevel46 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .

@@ -1,0 +1,230 @@
+@prefix fria: <http://www.example.org/fria-report#> .
+@prefix airo: <https://w3id.org/airo#> .
+@prefix vair: <https://w3id.org/vair#> .
+@prefix cids: <http://www.example.org/cids#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Basic Report Information
+fria:AIDungeon-ContentModeration-Report a fria:FRIA-report ;
+    fria:hasReportName "AI Dungeon GPT-3 offensive speech filter" ;
+    fria:hasOrganisationPositionDescription "Content moderation system | NLP/text analysis" ;
+    fria:hasContributorDetails "AI Dungeon, Latitude, OpenAI, Suchin Gururangan, Nick Walton" ;
+    fria:hasAssessmentContent "AI Dungeon developer Latitude faced criticism for its content moderation system to prevent stories depicting sexual encounters with minors. The upgrade to OpenAI's GPT-3 resulted in some players generating inappropriate stories. The new solution blocked a wider range of content than intended, raising concerns over privacy as private content was reviewed by moderators." ;
+    fria:hasTechnologyAndDataDescription "NLP/text analysis for content moderation, using OpenAI's GPT-3 model to filter offensive content." ;
+    fria:hasPurposesAndContextDescription "Minimise sexual content" ;
+    fria:reportDate "2022-08-30"^^xsd:date ;
+    fria:hasAIAAICLink "https://www.aiaaic.org/aiaaic-repository/ai-algorithmic-and-automation-incidents/ai-dungeon-offensive-speech-filter" .
+
+# Challenge 1
+fria:Challenge1 a fria:FRIA-reportChallenge ;
+    rdfs:comment "Presumption of innocence and right to an effective remedy and to a fair trial." .
+
+fria:Evaluation11 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The content moderation system blocked a broader range of content than intended, leading to errors in content filtering." .
+
+fria:ImpactLevel11 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Moderate impact due to unintended blocking of non-offensive content." .
+
+fria:Challenge11 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:Evaluation11 ;
+    fria:FRIA-reporthasImpactLevel fria:ImpactLevel11 ;
+    rdfs:comment "The AI system does not communicate that a decision/advice or outcome is the result of an algorithmic decision." ;
+    owl:equivalentClass airo:Transparency, vair:OperatingCriticalDigitalInfrastructure .
+
+fria:Evaluation12 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "This is the evaluation content for FRIA-reportEvaluation12." .
+
+fria:ImpactLevel12 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "This is the impact level content for FRIA-reportImpactLevel12." .
+
+fria:Challenge12 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:Evaluation12 ;
+    fria:FRIA-reporthasImpactLevel fria:ImpactLevel12 ;
+    rdfs:comment "The AI system does not provide percentages or other indication on the degree of likelihood that the outcome is correct/incorrect, prejudicing the user that there is no possibility of error and therefore that the outcome is undoubtedly incriminating." .
+
+fria:Evaluation13 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "This is the evaluation content for FRIA-reportEvaluation13." .
+
+fria:ImpactLevel13 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "This is the impact level content for FRIA-reportImpactLevel13." .
+
+fria:Challenge13 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:Evaluation13 ;
+    fria:FRIA-reporthasImpactLevel fria:ImpactLevel13 ;
+    rdfs:comment "The AI system produces an outcome that forces a reversal of burden of proof upon the suspect, by presenting itself as an absolute truth, practically depriving the defence of any chance to counter it." ;
+    owl:equivalentClass vair:DetectingEmotionalState .
+
+fria:Evaluation14 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "This is the evaluation content for FRIA-reportEvaluation14." .
+
+fria:ImpactLevel14 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "This is the impact level content for FRIA-reportImpactLevel14." .
+
+fria:Challenge14 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:Evaluation14 ;
+    fria:FRIA-reporthasImpactLevel fria:ImpactLevel14 ;
+    rdfs:comment "There is no explanation of reasons and criteria behind a certain output of the AI system that the user can understand." .
+
+fria:Evaluation15 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "This is the evaluation content for FRIA-reportEvaluation15." .
+
+fria:ImpactLevel15 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "This is the impact level content for FRIA-reportImpactLevel15." .
+
+fria:Challenge15 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:Evaluation15 ;
+    fria:FRIA-reporthasImpactLevel fria:ImpactLevel15 ;
+    rdfs:comment "There is no indication of the extent to which the AI system influences the overall decision-making process." .
+
+fria:Evaluation16 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "This is the evaluation content for FRIA-reportEvaluation16." .
+
+fria:ImpactLevel16 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "This is the impact level content for FRIA-reportImpactLevel16." .
+
+fria:Challenge16 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:Evaluation16 ;
+    fria:FRIA-reporthasImpactLevel fria:ImpactLevel16 ;
+    rdfs:comment "There is no set of measures that allow for redress in case of the occurrence of any harm or adverse impact." ;
+    owl:equivalentClass vair:InsurancePricing .
+
+# Challenge 2
+fria:Challenge2 a fria:FRIA-reportChallenge ;
+    rdfs:comment "Right to equality and non-discrimination." .
+
+fria:Evaluation21 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "This is the evaluation content for FRIA-reportEvaluation21." .
+
+fria:ImpactLevel21 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "This is the impact level content for FRIA-reportImpactLevel21." .
+
+fria:Challenge21 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:Evaluation21 ;
+    fria:FRIA-reporthasImpactLevel fria:ImpactLevel21 ;
+    rdfs:comment "The AI system targets members of a specific social group." ;
+    owl:equivalentClass airo:PrivateService, vair:ControllingSafetyOfRoadTrafficManagement .
+
+fria:Evaluation22 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "This is the evaluation content for FRIA-reportEvaluation22." .
+
+fria:ImpactLevel22 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "This is the impact level content for FRIA-reportImpactLevel22." .
+
+fria:Challenge22 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:Evaluation22 ;
+    fria:FRIA-reporthasImpactLevel fria:ImpactLevel22 ;
+    rdfs:comment "There are no mechanisms to flag and correct issues related to bias, discrimination, or poor performance." .
+
+fria:Evaluation23 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "This is the evaluation content for FRIA-reportEvaluation23." .
+
+fria:ImpactLevel23 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "This is the impact level content for FRIA-reportImpactLevel23." .
+
+fria:Challenge23 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:Evaluation23 ;
+    fria:FRIA-reporthasImpactLevel fria:ImpactLevel23 ;
+    rdfs:comment "The AI system does not consider the diversity and representativeness for specific population or problematic use cases." .
+
+# Challenge 3
+fria:Challenge3 a fria:FRIA-reportChallenge ;
+    rdfs:comment "Freedom of expression and information." .
+
+fria:Evaluation31 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "This is the evaluation content for FRIA-reportEvaluation31." .
+
+fria:ImpactLevel31 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "This is the impact level content for FRIA-reportImpactLevel31." .
+
+fria:Challenge31 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:Evaluation31 ;
+    fria:FRIA-reporthasImpactLevel fria:ImpactLevel31 ;
+    rdfs:comment "There is no mechanism to limit the deployment of the AI system to suspected individuals." .
+
+fria:Evaluation32 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "This is the evaluation content for FRIA-reportEvaluation32." .
+
+fria:ImpactLevel32 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "This is the impact level content for FRIA-reportImpactLevel32." .
+
+fria:Challenge32 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:Evaluation32 ;
+    fria:FRIA-reporthasImpactLevel fria:ImpactLevel32 ;
+    rdfs:comment "The data stored, recorded, and produced are not easily accessible to concerned individuals." .
+
+# Challenge 4
+fria:Challenge4 a fria:FRIA-reportChallenge ;
+    rdfs:comment "Right to respect for private and family life and right to protection of personal data." .
+
+fria:Evaluation41 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "This is the evaluation content for FRIA-reportEvaluation41." .
+
+fria:ImpactLevel41 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "This is the impact level content for FRIA-reportImpactLevel41." .
+
+fria:Challenge41 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:Evaluation41 ;
+    fria:FRIA-reporthasImpactLevel fria:ImpactLevel41 ;
+    rdfs:comment "There are no mechanisms for the user to exercise control over the processing of personal data." .
+
+fria:Evaluation42 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "This is the evaluation content for FRIA-reportEvaluation42." .
+
+fria:ImpactLevel42 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "This is the impact level content for FRIA-reportImpactLevel42." .
+
+fria:Challenge42 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:Evaluation42 ;
+    fria:FRIA-reporthasImpactLevel fria:ImpactLevel42 ;
+    rdfs:comment "There are no measures to ensure the lawfulness of the processing of personal data." ;
+    owl:equivalentClass airo:PublicService .
+
+fria:Evaluation43 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "This is the evaluation content for FRIA-reportEvaluation43." .
+
+fria:ImpactLevel43 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "This is the impact level content for FRIA-reportImpactLevel43." .
+
+fria:Challenge43 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:Evaluation43 ;
+    fria:FRIA-reporthasImpactLevel fria:ImpactLevel43 ;
+    rdfs:comment "There are no procedures to limit the access to personal data and to the extent and amount necessary for those purposes." ;
+    owl:equivalentClass airo:Managing .
+
+fria:Evaluation44 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "This is the evaluation content for FRIA-reportEvaluation44." .
+
+fria:ImpactLevel44 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "This is the impact level content for FRIA-reportImpactLevel44." .
+
+fria:Challenge44 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:Evaluation44 ;
+    fria:FRIA-reporthasImpactLevel fria:ImpactLevel44 ;
+    rdfs:comment "There is no mechanism allowing to comply with the exercise of data subject’s rights (access, rectification and erasure of data relating to a specific individual)." .
+
+fria:Evaluation45 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "This is the evaluation content for FRIA-reportEvaluation45." .
+
+fria:ImpactLevel45 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "This is the impact level content for FRIA-reportImpactLevel45." .
+
+fria:Challenge45 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:Evaluation45 ;
+    fria:FRIA-reporthasImpactLevel fria:ImpactLevel45 ;
+    rdfs:comment "There are no specific measures in place to enhance the security of the processing of personal data (via encryption, anonymisation and aggregation)." ;
+    owl:equivalentClass vair:ApplyingTheLawToFacts .
+
+fria:Evaluation46 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "This is the evaluation content for FRIA-reportEvaluation46." .
+
+fria:ImpactLevel46 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "This is the impact level content for FRIA-reportImpactLevel46." .
+
+fria:Challenge46 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:Evaluation46 ;
+    fria:FRIA-reporthasImpactLevel fria:ImpactLevel46 ;
+    rdfs:comment "There is no procedure to conduct a data protection impact assessment." ;
+    owl:equivalentClass airo:Monitoring .

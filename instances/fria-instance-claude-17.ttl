@@ -1,0 +1,234 @@
+@prefix fria: <http://www.example.org/fria-report> .
+@prefix airo: <https://w3id.org/airo#> .
+@prefix vair: <https://w3id.org/vair#> .
+@prefix cids: <http://www.example.org/cids#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+fria:FRIA-report-017 a fria:FRIA-report ;
+    fria:hasReportName "AI invents 40,000 biochemical warfare agents" ;
+    fria:hasOrganisationPositionDescription "Researchers at Collaborations Pharmaceuticals" ;
+    fria:hasContributorDetails "Fabio Urbina and colleagues" ;
+    fria:hasAssessmentContent "Researchers tweaked an AI system usually used to predict the toxicity of pipeline drugs to invent 40,000 potentially lethal molecules in just six hours. The experiment demonstrates how easily medical AI technology can be misused to create biochemical weapons." ;
+    fria:hasTechnologyAndDataDescription "MegaSyn AI model, normally used for drug discovery, was inverted to seek toxic compounds. Used open-source toxicity datasets and generative models." ;
+    fria:hasPurposesAndContextDescription "To demonstrate potential misuse of AI in drug discovery at the Spiez Convergence conference on biochemical security threats." ;
+    fria:reportDate "2022-03-07"^^xsd:date ;
+    fria:hasAIAAICLink "https://www.aiaaic.org/aiaaic-repository/ai-algorithmic-and-automation-incidents/ai-invents-40000-biochemical-warfare-agents" .
+
+fria:FRIA-reportChallenge1 a fria:FRIA-reportChallenge ;
+    rdfs:comment "Presumption of innocence and right to an effective remedy and to a fair trial." .
+
+fria:FRIA-reportChallenge11 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation11 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel11 ;
+    rdfs:comment "The AI system does not communicate that a decision/advice or outcome is the result of an algorithmic decision" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 .
+
+fria:FRIA-reportEvaluation11 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The AI system does not communicate that its output is the result of an algorithmic decision. The researchers noted the ease with which the AI could generate potentially lethal molecules without explicitly stating its nature." .
+
+fria:FRIA-reportImpactLevel11 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge12 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation12 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel12 ;
+    rdfs:comment "The AI system does not provide percentages or other indication on the degree of likelihood that the outcome is correct/incorrect, prejudicing the user that there is no possibility of error and therefore that the outcome is undoubtedly incriminating" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 .
+
+fria:FRIA-reportEvaluation12 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The AI system does not provide percentages or indications on the degree of likelihood that the output is correct/incorrect. The researchers noted that some generated compounds were predicted to be more toxic than VX, but acknowledged these were predictions that hadn't been verified." .
+
+fria:FRIA-reportImpactLevel12 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge13 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation13 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel13 ;
+    rdfs:comment "The AI system produces an outcome that forces a reversal of burden of proof upon the suspect, by presenting itself as an absolute truth, practically depriving the defence of any chance to counter it" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 .
+
+fria:FRIA-reportEvaluation13 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The AI system produces outcomes that could be presented as absolute truth, potentially reversing the burden of proof. The researchers noted that the AI generated known chemical warfare agents it had never seen before, lending credibility to its other outputs." .
+
+fria:FRIA-reportImpactLevel13 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Very High" .
+
+fria:FRIA-reportChallenge14 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation14 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel14 ;
+    rdfs:comment "There is no explanation of reasons and criteria behind a certain output of the AI system that the user can understand" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 .
+
+fria:FRIA-reportEvaluation14 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There is limited explanation of the reasons and criteria behind the AI system's output. The researchers noted that while they understood the process, the ease of replication could lead to misuse by those without full understanding." .
+
+fria:FRIA-reportImpactLevel14 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge15 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation15 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel15 ;
+    rdfs:comment "There is no indication of the extent to which the AI system influences the overall decision-making process" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 .
+
+fria:FRIA-reportEvaluation15 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There is no clear indication of the extent to which the AI system influences the overall decision-making process. The researchers noted that while synthesis of the molecules would be an additional step, the AI's output could significantly influence decisions on which molecules to pursue." .
+
+fria:FRIA-reportImpactLevel15 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Medium" .
+
+fria:FRIA-reportChallenge16 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation16 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel16 ;
+    rdfs:comment "There is no set of measures that allow for redress in case of the occurrence of any harm or adverse impact" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 .
+
+fria:FRIA-reportEvaluation16 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There are no clear measures for redress in case of harm or adverse impact. The researchers highlighted the potential for misuse and the lack of existing safeguards in the AI drug discovery field." .
+
+fria:FRIA-reportImpactLevel16 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Very High" .
+
+fria:FRIA-reportChallenge2 a fria:FRIA-reportChallenge ;
+    rdfs:comment "Right to equality and non-discrimination." .
+
+fria:FRIA-reportChallenge21 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation21 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel21 ;
+    rdfs:comment "The AI system targets members of a specific social group" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge2 .
+
+fria:FRIA-reportEvaluation21 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The AI system could potentially target specific groups if misused. While not explicitly stated in the report, the potential for creating targeted biochemical agents raises significant ethical concerns." .
+
+fria:FRIA-reportImpactLevel21 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge22 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation22 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel22 ;
+    rdfs:comment "There are no mechanisms to flag and correct issues related to bias, discrimination, or poor performance" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge2 .
+
+fria:FRIA-reportEvaluation22 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There are limited mechanisms to flag and correct issues related to bias, discrimination, or poor performance. The researchers noted the lack of guidelines on misuse of AI technology in the field." .
+
+fria:FRIA-reportImpactLevel22 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge23 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation23 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel23 ;
+    rdfs:comment "The AI system does not consider the diversity and representativeness for specific population or problematic use cases" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge2 .
+
+fria:FRIA-reportEvaluation23 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The AI system's consideration of diversity and representativeness is not explicitly addressed. The focus on generating toxic compounds could lead to unintended consequences for various populations." .
+
+fria:FRIA-reportImpactLevel23 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Medium" .
+
+fria:FRIA-reportChallenge3 a fria:FRIA-reportChallenge ;
+    rdfs:comment "Freedom of expression and information." .
+
+fria:FRIA-reportChallenge31 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation31 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel31 ;
+    rdfs:comment "There is no mechanism to limit the deployment of the AI system to suspected individuals" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge3 .
+
+fria:FRIA-reportEvaluation31 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There is no mechanism to limit the deployment of the AI system to specific individuals or purposes. The researchers highlighted the ease of replicating their work with publicly available tools and datasets." .
+
+fria:FRIA-reportImpactLevel31 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Very High" .
+
+fria:FRIA-reportChallenge32 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation32 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel32 ;
+    rdfs:comment "The data stored, recorded, and produced are not easily accessible to concerned individuals" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge3 .
+
+fria:FRIA-reportEvaluation32 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The data stored, recorded, and produced by the AI system may not be easily accessible to concerned individuals. The researchers debated whether to publish their findings due to potential misuse." .
+
+fria:FRIA-reportImpactLevel32 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge4 a fria:FRIA-reportChallenge ;
+    rdfs:comment "Right to respect for private and family life and right to protection of personal data." .
+
+fria:FRIA-reportChallenge41 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation41 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel41 ;
+    rdfs:comment "There are no mechanisms for the user to exercise control over the processing of personal data" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 .
+
+fria:FRIA-reportEvaluation41 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There are limited mechanisms for users to exercise control over the processing of personal data. The use of open-source datasets raises concerns about data protection and control." .
+
+fria:FRIA-reportImpactLevel41 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Medium" .
+
+fria:FRIA-reportChallenge42 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation42 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel42 ;
+    rdfs:comment "There are no measures to ensure the lawfulness of the processing of personal data" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 .
+
+fria:FRIA-reportEvaluation42 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There are limited measures to ensure the lawfulness of the processing of personal data. The researchers noted the lack of guidelines and regulations in the AI drug discovery field regarding potential misuse." .
+
+fria:FRIA-reportImpactLevel42 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge43 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation43 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel43 ;
+    rdfs:comment "There are no procedures to limit the access to personal data and to the extent and amount necessary for those purposes" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 .
+
+fria:FRIA-reportEvaluation43 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There are limited procedures to restrict access to personal data. The researchers highlighted the ease of access to toxicity datasets and the potential for misuse." .
+
+fria:FRIA-reportImpactLevel43 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge44 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation44 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel44 ;
+    rdfs:comment "There is no mechanism allowing to comply with the exercise of data subject's rights (access, rectification and erasure of data relating to a specific individual)" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 .
+
+fria:FRIA-reportEvaluation44 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There is no clear mechanism allowing compliance with the exercise of data subject's rights. The researchers did not address this aspect specifically in their experiment." .
+
+fria:FRIA-reportImpactLevel44 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Medium" .
+
+fria:FRIA-reportChallenge45 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation45 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel45 ;
+    rdfs:comment "There are no specific measures in place to enhance the security of the processing of personal data (via encryption, anonymisation and aggregation)" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 .
+
+fria:FRIA-reportEvaluation45 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There are limited specific measures to enhance the security of the processing of personal data. The researchers noted the lack of safeguards and the potential for misuse of the AI technology." .
+
+fria:FRIA-reportImpactLevel45 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge46 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation46 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel46 ;
+    rdfs:comment "There is no procedure to conduct a data protection impact assessment" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 .
+
+fria:FRIA-reportEvaluation46 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There is no clear procedure to conduct a data protection impact assessment. The researchers highlighted the need for greater awareness and guidelines in the AI drug discovery community." .
+
+fria:FRIA-reportImpactLevel46 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .

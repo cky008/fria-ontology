@@ -1,0 +1,184 @@
+@prefix fria: <http://www.example.org/fria-report> .
+@prefix airo: <https://w3id.org/airo#> .
+@prefix vair: <https://w3id.org/vair#> .
+@prefix cids: <http://www.example.org/cids#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+fria:Report3 a fria:FRIA-report ;
+    fria:hasReportName "7-Eleven customer survey facial recognition" ;
+    fria:hasOrganisationPositionDescription "" ;
+    fria:hasContributorDetails "7-Eleven" ;
+    fria:hasAssessmentContent "Chain store 7-Eleven breached customer privacy in 700 stores between June 2020 and August 2021 by collecting facial imagery without consent, according to Australia's privacy commissioner the OAIC. The commissioner ruled that 7-Eleven abused customer privacy by collecting and storing their facial images in order to validate a survey it had been conducting into customer needs and to understand their demographic profile." ;
+    fria:hasTechnologyAndDataDescription "The AI system used facial recognition technology to validate survey responses by capturing customers' facial images at two points during the survey-taking process." ;
+    fria:hasPurposesAndContextDescription "Validate survey responses; Privacy; Necessity/proportionality" ;
+    fria:reportDate "2021-08-31"^^xsd:date ;
+    fria:hasAIAAICLink "https://www.aiaaic.org/aiaaic-repository/ai-algorithmic-and-automation-incidents/7-eleven-customer-survey-facial-recognition" .
+
+# Challenge 1
+fria:FRIA-reportChallenge1 a fria:FRIA-reportChallenge ;
+    rdfs:comment "Presumption of innocence and right to an effective remedy and to a fair trial." .
+
+fria:FRIA-reportChallenge11 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation11 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel11 ;
+    rdfs:comment "The AI system does not communicate that a decision/advice or outcome is the result of an algorithmic decision." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 ;
+    owl:equivalentClass airo:Transparency, vair:OperatingCriticalDigitalInfrastructure .
+
+fria:FRIA-reportEvaluation11 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "7-Eleven did not provide adequate notice to customers that their facial images were being used to validate survey responses. This lack of transparency means that customers were unaware of the AI system's role in the process." .
+
+fria:FRIA-reportImpactLevel11 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge12 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation12 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel12 ;
+    rdfs:comment "The AI system does not provide percentages or other indication on the degree of likelihood that the outcome is correct/incorrect, prejudicing the user that there is no possibility of error and therefore that the outcome is undoubtedly incriminating." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 .
+
+fria:FRIA-reportEvaluation12 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The lack of transparency in how facial images are processed and used makes it impossible for customers to understand the potential error rates and biases in the system." .
+
+fria:FRIA-reportImpactLevel12 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Medium" .
+
+# Challenge 2
+fria:FRIA-reportChallenge2 a fria:FRIA-reportChallenge ;
+    rdfs:comment "Right to equality and non-discrimination." .
+
+fria:FRIA-reportChallenge21 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation21 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel21 ;
+    rdfs:comment "The AI system targets members of a specific social group." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge2 ;
+    owl:equivalentClass airo:PrivateService, vair:ControllingSafetyOfRoadTrafficManagement .
+
+fria:FRIA-reportEvaluation21 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The system may have inherent biases that disproportionately affect certain demographic groups, particularly minorities, leading to unfair treatment." .
+
+fria:FRIA-reportImpactLevel21 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge22 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation22 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel22 ;
+    rdfs:comment "There are no mechanisms to flag and correct issues related to bias, discrimination, or poor performance." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge2 .
+
+fria:FRIA-reportEvaluation22 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The absence of mechanisms to address bias and discrimination means that the system could perpetuate existing inequalities without accountability." .
+
+fria:FRIA-reportImpactLevel22 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Medium" .
+
+# Challenge 3
+fria:FRIA-reportChallenge3 a fria:FRIA-reportChallenge ;
+    rdfs:comment "Freedom of expression and information." .
+
+fria:FRIA-reportChallenge31 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation31 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel31 ;
+    rdfs:comment "There is no mechanism to limit the deployment of the AI system to suspected individuals." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge3 .
+
+fria:FRIA-reportEvaluation31 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The widespread deployment of facial recognition for surveys without consent or sufficient notification constitutes arbitrary interference with customer privacy." .
+
+fria:FRIA-reportImpactLevel31 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge32 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation32 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel32 ;
+    rdfs:comment "The data stored, recorded, and produced are not easily accessible to concerned individuals." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge3 .
+
+fria:FRIA-reportEvaluation32 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "Customers were not informed about how their data would be used or stored, nor were they given access to their data, limiting transparency and control over personal information." .
+
+fria:FRIA-reportImpactLevel32 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Medium" .
+
+# Challenge 4
+fria:FRIA-reportChallenge4 a fria:FRIA-reportChallenge ;
+    rdfs:comment "Right to respect for private and family life and right to protection of personal data." .
+
+fria:FRIA-reportChallenge41 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation41 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel41 ;
+    rdfs:comment "There are no mechanisms for the user to exercise control over the processing of personal data." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 .
+
+fria:FRIA-reportEvaluation41 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "Customers were not provided with options to control or limit the use of their biometric data, compromising their ability to protect their personal information." .
+
+fria:FRIA-reportImpactLevel41 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge42 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation42 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel42 ;
+    rdfs:comment "There are no measures to ensure the lawfulness of the processing of personal data." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass airo:PublicService .
+
+fria:FRIA-reportEvaluation42 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The collection and processing of facial images were conducted without sufficient legal justification or compliance with privacy laws, leading to unlawful data processing practices." .
+
+fria:FRIA-reportImpactLevel42 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Medium" .
+
+fria:FRIA-reportChallenge43 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation43 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel43 ;
+    rdfs:comment "There are no procedures to limit the access to personal data and to the extent and amount necessary for those purposes." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass airo:Managing .
+
+fria:FRIA-reportEvaluation43 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The absence of procedures to limit access to biometric data means that personal information was potentially accessible to unauthorized individuals, increasing the risk of data breaches." .
+
+fria:FRIA-reportImpactLevel43 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge44 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation44 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel44 ;
+    rdfs:comment "There is no mechanism allowing to comply with the exercise of data subject’s rights (access, rectification and erasure of data relating to a specific individual)." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 .
+
+fria:FRIA-reportEvaluation44 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "Customers were not provided with means to exercise their data subject rights, such as accessing or correcting their personal data, undermining their control over their own information." .
+
+fria:FRIA-reportImpactLevel44 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge45 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation45 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel45 ;
+    rdfs:comment "There are no specific measures in place to enhance the security of the processing of personal data (via encryption, anonymisation and aggregation)." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass vair:ApplyingTheLawToFacts .
+
+fria:FRIA-reportEvaluation45 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The lack of security measures, such as encryption and anonymization, to protect biometric data increases the risk of unauthorized access and misuse." .
+
+fria:FRIA-reportImpactLevel45 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge46 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation46 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel46 ;
+    rdfs:comment "There is no procedure to conduct a data protection impact assessment." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass airo:Monitoring .
+
+fria:FRIA-reportEvaluation46 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The failure to conduct a data protection impact assessment (DPIA) means that potential risks to data privacy and security were not adequately identified or mitigated." .
+
+fria:FRIA-reportImpactLevel46 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .

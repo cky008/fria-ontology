@@ -1,0 +1,237 @@
+@prefix fria: <http://www.example.org/fria-report#> .
+@prefix airo: <https://w3id.org/airo#> .
+@prefix vair: <https://w3id.org/vair#> .
+@prefix cids: <http://www.example.org/cids#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+fria:FRIA-report-031 a fria:FRIA-report ;
+    fria:hasReportName "Amazon, Waterstones algorithms promote vaccine misinformation" ;
+    fria:hasOrganisationPositionDescription "Researchers at the University of Washington and Sky News conducted studies revealing the promotion of vaccine misinformation by Amazon, Waterstones, and Foyles algorithms." ;
+    fria:hasContributorDetails "Researchers at the University of Washington; Sky News." ;
+    fria:hasTechnologyAndDataDescription "The recommendation algorithms used by Amazon, Waterstones, and Foyles." ;
+    fria:hasPurposesAndContextDescription "The study aimed to highlight how recommendation algorithms contribute to the spread of vaccine misinformation." ;
+    fria:reportDate "2023-07-07"^^xsd:date ;
+    fria:hasAIAAICLink "https://www.aiaaic.org/aiaaic-repository/amazon-algorithms-promote-vaccine-misinformation" .
+
+# Challenge 1: Presumption of innocence and right to an effective remedy and to a fair trial
+fria:FRIA-reportChallenge1 a fria:FRIA-reportChallenge ;
+    rdfs:comment "Presumption of innocence and right to an effective remedy and to a fair trial." .
+
+fria:FRIA-reportChallenge11 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation11 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel11 ;
+    rdfs:comment "The AI system does not communicate that a decision/advice or outcome is the result of an algorithmic decision." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 .
+
+fria:FRIA-reportEvaluation11 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The algorithms do not provide transparency regarding how they prioritize and recommend content, which can lead to unfair treatment of certain viewpoints and the spread of misinformation." .
+
+fria:FRIA-reportImpactLevel11 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Lack of transparency can undermine trust and the perceived fairness of the system." .
+
+fria:FRIA-reportChallenge12 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation12 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel12 ;
+    rdfs:comment "The AI system does not provide percentages or other indication on the degree of likelihood that the outcome is correct/incorrect." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 .
+
+fria:FRIA-reportEvaluation12 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The lack of probabilistic information leads to over-reliance on the recommendations, with users believing them to be more accurate than they might be." .
+
+fria:FRIA-reportImpactLevel12 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "This can lead to misinformation being taken as fact, impacting public health decisions." .
+
+fria:FRIA-reportChallenge13 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation13 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel13 ;
+    rdfs:comment "The AI system produces an outcome that forces a reversal of burden of proof upon the suspect." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 .
+
+fria:FRIA-reportEvaluation13 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The algorithms present information as absolute truths, making it difficult for users to contest or verify the information provided." .
+
+fria:FRIA-reportImpactLevel13 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "This can lead to an erosion of critical thinking and informed decision-making among users." .
+
+fria:FRIA-reportChallenge14 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation14 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel14 ;
+    rdfs:comment "There is no explanation of reasons and criteria behind a certain output of the AI system that the user can understand." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 .
+
+fria:FRIA-reportEvaluation14 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "Users are not provided with explanations or the reasoning behind the recommendations, which hinders their ability to make informed choices." .
+
+fria:FRIA-reportImpactLevel14 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "This lack of explainability reduces user autonomy and trust in the system." .
+
+fria:FRIA-reportChallenge15 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation15 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel15 ;
+    rdfs:comment "There is no indication of the extent to which the AI system influences the overall decision-making process." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 .
+
+fria:FRIA-reportEvaluation15 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The influence of the algorithm on decision-making is not clear, making it difficult to assess its impact." .
+
+fria:FRIA-reportImpactLevel15 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "This opacity can lead to unchecked algorithmic influence, with potential negative consequences for user decision-making." .
+
+fria:FRIA-reportChallenge16 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation16 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel16 ;
+    rdfs:comment "There is no set of measures that allow for redress in case of the occurrence of any harm or adverse impact." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 .
+
+fria:FRIA-reportEvaluation16 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There are no mechanisms in place for users to seek redress or corrections if they are harmed by the misinformation." .
+
+fria:FRIA-reportImpactLevel16 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "The lack of redress mechanisms can lead to prolonged harm and a lack of accountability for the platform." .
+
+# Challenge 2: Right to equality and non-discrimination.
+fria:FRIA-reportChallenge2 a fria:FRIA-reportChallenge ;
+    rdfs:comment "Right to equality and non-discrimination." .
+
+fria:FRIA-reportChallenge21 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation21 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel21 ;
+    rdfs:comment "The AI system targets members of a specific social group." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge2 .
+
+fria:FRIA-reportEvaluation21 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The algorithms may disproportionately target or exclude specific social groups based on biased data." .
+
+fria:FRIA-reportImpactLevel21 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "This can lead to unequal treatment and reinforce existing social biases." .
+
+fria:FRIA-reportChallenge22 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation22 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel22 ;
+    rdfs:comment "There are no mechanisms to flag and correct issues related to bias, discrimination, or poor performance." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge2 .
+
+fria:FRIA-reportEvaluation22 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The platform lacks robust mechanisms to identify and address bias or discrimination in its recommendations." .
+
+fria:FRIA-reportImpactLevel22 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Without such mechanisms, biased or discriminatory recommendations can persist unchecked." .
+
+fria:FRIA-reportChallenge23 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation23 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel23 ;
+    rdfs:comment "The AI system does not consider the diversity and representativeness for specific population or problematic use cases." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge2 .
+
+fria:FRIA-reportEvaluation23 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The recommendation algorithms do not adequately account for the diversity of users, leading to potentially unrepresentative results." .
+
+fria:FRIA-reportImpactLevel23 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "This can result in certain groups being marginalized or underserved by the recommendations." .
+
+# Challenge 3: Freedom of expression and information.
+fria:FRIA-reportChallenge3 a fria:FRIA-reportChallenge ;
+    rdfs:comment "Freedom of expression and information." .
+
+fria:FRIA-reportChallenge31 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation31 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel31 ;
+    rdfs:comment "There is no mechanism to limit the deployment of the AI system to suspected individuals." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge3 .
+
+fria:FRIA-reportEvaluation31 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The algorithms do not include measures to limit their application to individuals where appropriate, potentially leading to overreach." .
+
+fria:FRIA-reportImpactLevel31 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "This can result in unwarranted invasions of privacy and misuse of data." .
+
+fria:FRIA-reportChallenge32 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation32 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel32 ;
+    rdfs:comment "The data stored, recorded, and produced are not easily accessible to concerned individuals." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge3 .
+
+fria:FRIA-reportEvaluation32 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "Users do not have easy access to the data that is collected and used by the algorithms, hindering their ability to understand and control its use." .
+
+fria:FRIA-reportImpactLevel32 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "This lack of accessibility can lead to a loss of control over personal information and reduced transparency." .
+
+# Challenge 3: Right to respect for private and family life and right to protection of personal data.
+fria:FRIA-reportChallenge4 a fria:FRIA-reportChallenge ;
+    rdfs:comment "Right to respect for private and family life and right to protection of personal data." .
+
+fria:FRIA-reportChallenge41 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation41 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel41 ;
+    rdfs:comment "There are no mechanisms for the user to exercise control over the processing of personal data." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 .
+
+fria:FRIA-reportEvaluation41 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The system does not provide users with sufficient controls to manage how their personal data is processed." .
+
+fria:FRIA-reportImpactLevel41 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "This can lead to misuse of personal data and reduced user trust." .
+
+fria:FRIA-reportChallenge42 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation42 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel42 ;
+    rdfs:comment "There are no measures to ensure the lawfulness of the processing of personal data." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 .
+
+fria:FRIA-reportEvaluation42 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The platform lacks adequate measures to ensure that personal data processing complies with legal standards." .
+
+fria:FRIA-reportImpactLevel42 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "This can result in unlawful processing activities and potential legal repercussions." .
+
+fria:FRIA-reportChallenge43 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation43 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel43 ;
+    rdfs:comment "There are no procedures to limit the access to personal data and to the extent and amount necessary for those purposes." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 .
+
+fria:FRIA-reportEvaluation43 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The algorithms do not have procedures to restrict access to personal data to only what is necessary." .
+
+fria:FRIA-reportImpactLevel43 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "This can lead to excessive data access and increased risk of data breaches." .
+
+fria:FRIA-reportChallenge44 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation44 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel44 ;
+    rdfs:comment "There is no mechanism allowing to comply with the exercise of data subject’s rights (access, rectification and erasure of data relating to a specific individual)." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 .
+
+fria:FRIA-reportEvaluation44 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The platform does not facilitate the exercise of data subject rights, such as access, rectification, and erasure of personal data." .
+
+fria:FRIA-reportImpactLevel44 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "This can result in non-compliance with data protection laws and reduced user rights." .
+
+fria:FRIA-reportChallenge45 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation45 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel45 ;
+    rdfs:comment "There are no specific measures in place to enhance the security of the processing of personal data (via encryption, anonymisation and aggregation)." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 .
+
+fria:FRIA-reportEvaluation45 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The system lacks advanced security measures like encryption and anonymization to protect personal data." .
+
+fria:FRIA-reportImpactLevel45 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "This can lead to vulnerabilities and potential data breaches." .
+
+fria:FRIA-reportChallenge46 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation46 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel46 ;
+    rdfs:comment "There is no procedure to conduct a data protection impact assessment." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 .
+
+fria:FRIA-reportEvaluation46 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The platform does not perform data protection impact assessments to identify and mitigate risks." .
+
+fria:FRIA-reportImpactLevel46 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Without impact assessments, potential risks to data protection are not proactively addressed." .

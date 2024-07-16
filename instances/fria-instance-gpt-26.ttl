@@ -1,0 +1,229 @@
+@prefix fria: <http://www.example.org/fria-report> .
+@prefix airo: <https://w3id.org/airo#> .
+@prefix vair: <https://w3id.org/vair#> .
+@prefix cids: <http://www.example.org/cids#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Basic Things
+fria:Report26 a fria:FRIA-report ;
+    fria:hasReportName "Alfi personalised, real-time advertising" ;
+    fria:hasOrganisationPositionDescription "" ;
+    fria:hasContributorDetails "" ;
+    fria:hasAssessmentContent "Alfi is a Miami-based digital marketing company that uses AI and computer vision to understand facial cues and perceptual details and matches relevant advertising or content based on the viewers profile. The firm says its software is designed to show ads to people based on their age, gender and ethnicity without specifically identifying any individual. In July 2021, Alfi drew criticism for saying it would run digital tablets equipped with facial recognition in 10,000 Uber and Lyft cabs in the US. The system analyses passengers' reactions to advertising and other content, sending information back to advertisers. Uber and Lyft told Bloomberg that Alfi contracts with their drivers directly, and that drivers must comply with local laws and regulations. The move prompted a written request (pdf) for information from US senators Amy Klobuchar and Richard Blumenthal, who claimed the programme raises 'serious concerns about privacy for your passengers. According to Bloomberg, Alfi also plans to sell user data, including retina tracking, keyword recognition, voice intonation, and demographics. Alfis exclusive network of AI-powered screens at the back of Uber & Lyft rideshares brings unprecedented targeting precision to digital out-of-home. We use computer vision technology to match audiences with relevant advertising in real-time and in a privacy-compliant process. Alfi brings next level transparency and accountability to the digital out-of-home advertising marketplace. ALFI is an intelligent software powered by AI and computer vision. With privacy engrained in the companys core values, we create relevant and interactive digital out-of-home (DOOH) advertising experiences, delivering the content to the end-user ethically and respectfully and offering DOOH advertisers a never-before-seen precision in DOOH targeting. ALFIs software turns a digital display into an intelligent screen that can detect audiences and serve the right messages to make their media more valuable and effective. ALFIs proprietary platform recognizes what not who is viewing a digital out-of-home ad and serves content based on the viewers gender and age in an ethical and respectful manner. ALFI believes this type of anonymized, yet targeted advertising is the future of the industry, especially as companies move away from cookies and deep collection of a consumers personal data and browsing history. ALFI solves many of the challenges advertisers face today and provides brands the ability to serve relevant ads to consumers in physical environments, driving sales and relevance without capturing any personal information. ALFI understands small facial cues and perceptual details to detect a face and predict the age and gender of the person looking at the screen. Hence, ALFI uses facial detection not facial recognition. ALFIs smart technology detects behavior without collecting or storing personal data or facial images. It sets new standards by providing precise targeting information to advertisers by collecting information in non-intrusive ways that are compliant with GDPR (General Data Protection Regulation), CCPA (California Consumer Privacy Act), and HIPAA (Health Insurance Portability and Accountability Act). Since both GDPR and CCPA focus on the collection and storage of personal data, the fact that ALFI does not collect any personal identifiers or information makes it compliant to these privacy laws. The ALFI platform is built using GDPR standards in the UK. For example, the Hammersmith Broadway Mall leverages ALFIs software. With ALFI, they are able to control the advertisements consumers are served in real time without capturing personal information. Similarly, in the Belfast Airport, we have set up kiosks that detect metrics like age and gender to deliver relevant content to the demographic viewing the screen, all built to GDPR standards. And, in keeping with those standards, our tablets in taxis do not store images of riders. Our mission is to enable the real-time advertising economy with the next generation of disruptive technology. Alfi is excited to be partnering with Uber and Lyft drivers to help provide them with an additional revenue opportunity. Juan Carlos, Miami-area Uber driver, states, \"This is a great opportunity for all of us rideshare drivers. Alfi not only gives us extra revenue, but it is a great tool for our customers. We can share places to eat, places to shop, and things to do around Miami. I absolutely love my Alfi. I have been driving around with Alfi installed for the past year and I am so excited to see the whole system come to life with advertisers and content providers. This is like magic and Alfi really works,\" commented Juan Carlos. This is a huge advancement for the advertising industry - brand owners have a completely new way to market their business. With ALFI's technology, the DOOH landscape now has accountability, transparency, and genuine reporting. It's a game changer; we are already seeing it with the demand from major advertisers and agencies,\" said Ron Spears, CRO, ALFI. Alfi's enterprise grade, multimedia computer vision and machine learning platform, generates powerful advertising recommendations and insights. Multiple technologies work together in Alfi with viewer privacy and reporting objectives as its two goals. Alfi solves the problem of providing real time, accurate and rich reporting on customer demographics, usage, interactivity, and engagement, while never storing any personal, identifiable information. Alfi was designed to be fully compliant with all privacy regulations including the General Data Protection Regulation, in Europe, California Consumer Privacy Act, and the Health Insurance Portability and Accountability Act. Ron Spears noted, \"The demand for Alfi has been overwhelming from both the UBER and Lyft drivers and the advertisers. This is going to be a massive ramp up and will happen in lightning speed. Alfi, Inc. provides solutions that bring transparency and accountability to the digital out of home advertising marketplace. Since 2018, Alfi, Inc. has been developing its artificial intelligence advertising platform to deliver targeted advertising in an ethical and privacy-conscious manner. This press release contains forward-looking statements. These statements are made under the \"safe harbor\" provisions of the U.S. Private Securities Litigation Reform Act of 1995. Statements that are not historical facts, including statements about the Company's beliefs and expectations, are forward-looking statements. Forward-looking statements involve inherent risks and uncertainties, and a number of factors could cause actual results to differ materially from those contained in any forward-looking statement. In some cases, forward-looking statements can be identified by words or phrases such as \"may\", \"will,\" \"expect,\" \"anticipate,\" \"target,\" \"aim,\" \"estimate,\" \"intend,\" \"plan,\" \"believe,\" \"potential,\" \"continue,\" \"is/are likely to\" or other similar expressions. Further information regarding these and other risks, uncertainties or factors is included in the Company's filings with the SEC. All information provided in this press release is as of the date of this press release, and the Company does not undertake any duty to update such information, except as required under applicable law. We invested into Alfi before we even thought that we had an opportunity of working with them. When I saw the technology, I was blown away that this was already here and running. My whole family invested in the IPO. This technology platform is disruptive and revolutionary. We want to be a part of it,\" comments Miguel Radillo, VP of All-Niter. Florentino Diaz, Project Manager of Alfi states, \"This is only the beginning. We are going to light up every major city in the USA. There is no other choice when it comes to accurate brand targeting and real data reporting. Nobody does this while remaining privacy compliant.\" Diaz comments further, noting, \"We have a massive operation unfolding in Miami today with hundreds of Ubers and Lyfts installing Alfi tablets. It's an epic event and marks the start of our nationwide rollout. What's most rewarding, is we can help rideshare drivers increase their income and help create employment opportunities with community outreach programs for students. The DOOH world is transitioning rapidly to impression-based accountability with major advertisers and national brands demanding more transparency and better accuracy in reporting metrics. Alfi is far ahead of this curve, having already built, tested, and now deploying these advanced platforms in the OOH world globally. It is incredibly exciting to see these paramount shifts towards ALFI's intelligent platform. Utilizing Alfi's technology, rideshare drivers can earn extra income while they drive their customers around. Alfi optimizes its network of digital tablets to deliver powerful reach, dynamic visuals, and tailored message capability by age, gender, geography, demographics, brand behavior and interests, all in real-time. Alfi's computer vision can change and run ads remotely to deliver the right content, to the right person, at the right time in a responsible and privacy compliant manner. Alfi provides data rich reporting functionality that informs the advertisers that someone viewed their ad, the number of views, and each viewer's reaction to the ad. Increasingly, advertisers are demanding improved performance and capabilities from the ad technology they utilize. Alfi delivers for advertisers with analytics, accountability, transparency, proof of engagement and actual impressions. Alfi, Inc. provides solutions that bring transparency and accountability to the digital out of home advertising marketplace. Since 2018, Alfi, Inc. has been developing its artificial intelligence advertising platform to deliver targeted advertising in an ethical and privacy-conscious manner. A family owned and operated business established in 2005 providing full services from design development, prototyping, component part 3D printing and laser cutting to full assembly, staging, testing, packaging and shipment. All-Niter, known to some as Niter Laser, has always kept up with technological advances. Starting its laser cutting department about a decade ago and testing the 3d printing market over 5 years ago, All-Niter has always provided the most cutting-edge services available. With a 3d printing farm of close to 50 machines, All-Niter is now capable of not just prototyping but high-volume manufacturing. Starting off as an architecture supply store providing materials to university level architecture students, All-Niter currently makes it a point to support its clients and contribute to the development of local businesses. As an evolving company they have created a community outreach program that provides opportunities for high school graduates to learn a business, gain experience and grow in an open and positive environment. All-Niter's virtuous and innovative philosophy gives them the edge on developing targeted logistical systems and customized production. This press release contains forward-looking statements. These statements are made under the \"safe harbor\" provisions of the U.S. Private Securities Litigation Reform Act of 1995. Statements that are not historical facts, including statements about the Company's beliefs and expectations, are forward-looking statements. Forward-looking statements involve inherent risks and uncertainties, and a number of factors could cause actual results to differ materially from those contained in any forward-looking statement. In some cases, forward-looking statements can be identified by words or phrases such as \"may\", \"will,\" \"expect,\" \"anticipate,\" \"target,\" \"aim,\" \"estimate,\" \"intend,\" \"plan,\" \"believe,\" \"potential,\" \"continue,\" \"is/are likely to\" or other similar expressions. Further information regarding these and other risks, uncertainties or factors is included in the Company's filings with the SEC. All information provided in this press release is as of the date of this press release, and the Company does not undertake any duty to update such information, except as required under applicable law. According to a press release announcing the rollout of the program, Alfi uses computer vision and its ads are tailored by age, gender, geography, demographics, brand behavior and interests'' and the tablet informs the advertisers that someone viewed their ad, the number of views, and each viewer's reaction to the ad. According to the release, hundreds'' of Ubers and Lyfts in Miami have installed the tablets. When passengers use ride-sharing services, they want to be safe and secure. They also have a reasonable expectation of privacy. We were therefore deeply disturbed to read that your drivers are installing digital tablets in the back seats of their cars to deliver targeted advertisements, the letter reads. These tablets are equipped with cameras that film passengers when they take an Uber or Lyft ride. The tablets then use artificial intelligence to assess their age, gender, race, location, and assumed interests based on their appearance, all of which they can use to show targeted advertisements to the Uber and Lyft passengers, the senators continue. According to news reports, the tablets then even provide information to advertisers about the passengers reactions to the ads, which seems even more intrusive. The senators end the letter with a list of questions for the companies to answer by July 12th, including: whether the firms have business relationships with Alfi, whether they have reviewed the program at all, if the adtech platform connects to the ride-hail apps, whether the program falls under Uber or Lyft's privacy policies, numbers on how many drivers have installed the tablets, and more information on the ads, content, data, and revenue generated by them. Lyft leaves third-party advertisements to be regulated by local laws, and drivers should keep in mind the impact they could have on riders, Lyft said in a statement to Motherboard. Uber does not have any relationship with Alfi. If drivers are participating in this program, they are doing so independently with Alfi, and would be subject to local regulations, Uber said in a statement. Biometric privacy is not something most U.S. consumers worry or even know about yet, but news of facial recognition systems being installed in Uber and Lyft cars prompted a rapid response from two U.S. senators. Miami is a test in the U.S. market for Uber, Lyft and Alfi. Some ride-hailing vehicles in London already carry the devices. Klobuchar, of Minnesota, and Blumenthal, of Connecticut, on June 29 requested information about, among other things, biometric data collection, storage and deletion. Two of the Senators questions focus on driver compensation. Alfi claims drivers agreeing to mount the tablets can earn as much as an extra $350 per month, and the senators want to know how those bonuses have total so far. The pair wants to know the average monthly compensation for May was. A freshly minted public company is one step closer to getting its facial recognition software in ride-hail fleets to record ad impressions. Founded in 2018, Alfi wants to be the intermediary between advertisers and passengers, collecting data from the faces of people watching content and ads on custom tablets. (It went public this spring. It has been hard if not impossible for advertisers to know with any degree of certainty if people are watching their messages. Small monitors showing local news and entertainment clips have played in the back of taxis for many years (it can feel like eons), and while everyone involved tells the ad people that riders pay at least some attention, the savvy know better. Alfis product is a functional tablet (it responds to typical commands), with camera, mounted on a seatback. Computer vision captures real-time demographic information and reactions. In theory, an advertiser could audit a representative sample of sessions to gauge a campaigns success. There seems to be no provision for the actions of angry, inebriated (or both) riders picked up when the clubs close. Noah Edwardsen, head of corporate communications at Uber, told DailyMail.com: 'Uber doesn't have a deal with Alfi. So if this is happening, it is something they are doing with drivers individually. While a Lyft spokes person told DailyMail.com:'Lyft leaves third-party advertisements to be regulated by local laws, and drivers should keep in mind the impact they could have on riders. Uber and Lyft vehicles will soon have digital tablets in back seats that display ads and track riders' faces to gauge reactions. However, Alfi has yet to reveal how it determines what visuals and messages are shown to which individuals. So instead of seeing ads for retirement homes or ads for wheelchairswhich are not really relevant to you as a 25 year old femaleinstead what you're seeing are lady's fashionable wear and designer sunglasses specifically curated for you. Alfia self-described 'AI enterprise SaaS platform company powering computer vision with machine learning models' announced last week it is providing drivers of the ride-sharing companies with 10,000 camera equipped devices. The tablets are equipped with Alfi's specialized algorithm that tracks 'small facial cues,' according to the company's website. Alfi's computer vision also changes and runs ads remotely 'to deliver the right content, to the right person, at the right time in a responsible and privacy compliant manner,' according to the firm. However, the first also notes that it 'respects user privacy; without tracking, storing cookies, or using identifiable personal information. Alfi is starting with drivers in Miami, Florida and plans to 'light up every major city in the USA,' Florentino Diaz, Project Manager of Alfi, said in a June 15 statement. The tablets are equipped with Alfi's specialized algorithm that tracks 'small facial cues,' according to the company's website. There is no other choice when it comes to accurate brand targeting and real data reporting,' Diaz added. We have a massive operation unfolding in Miami today with hundreds of Ubers and Lyfts installing Alfi tablets. It's an epic event and marks the start of our nationwide rollout. What's most rewarding, is we can help rideshare drivers increase their income and help create employment opportunities with community outreach programs for students. Last week, Uber and Lyft teamed up with a company that specializes in artificial intelligence (AI) to provide 10,000 drivers with digital tablets to track customers facial expressions and catalog riders information as they react to advertisements. The deal is part of a larger program in which Alfi gives drivers free tablets with built-in cameras, which will be used to recognize the demographics of the rider and display personalized content as well as advertisements. Drivers who participate in the program are promised a revenue share up to $350 per month if passengers engage with the content or advertisements. Alfi provides data rich reporting functionality that informs the advertisers that someone viewed their ad, the number of views, and each viewer's reaction to the ad. Increasingly, advertisers are demanding improved performance and capabilities from the ad technology they utilize. Alfi delivers for advertisers with analytics, accountability, transparency, proof of engagement and actual impressions, the companys press release stated. We have a massive operation unfolding in Miami today with hundreds of Ubers and Lyfts installing Alfi tablets, Florentino continued. Its an epic event and marks the start of our nationwide rollout. Whats most rewarding, is we can help rideshare drivers increase their income and help create employment opportunities with community outreach programs for students. Juan Carlos, a Miami-area Uber driver, said in a statement, This is a great opportunity for all of us rideshare drivers. Alfi not only gives us extra revenue, but it is a great tool for our customers. We can share places to eat, places to shop, and things to do around Miami. I absolutely love my Alfi. BC-Meme-Stock-Alfis-Facial-Recognition-Ad-Technology-Fans-Privacy-Concerns , Brody Ford Bloomberg) -- Alfi Inc., a small artificial intelligence software company, has ambitious plans to use facial recognition to target individualized ads to people as they walk through an airport, a shopping mall or stare at a screen in the back of an Uber. The idea could resonate with an ad industry thats grappling with the demise of tracking people across the internet through cookies. But the company, which has yet to sign up more than one advertiser,is also sparking some of the same concerns about privacy that has stymied even the more traditional tech giants. This disproportionate gap between its vision and its fundamentals has made Alfi a popular meme stock, subject to wide swings in its share price.Alfis software is designed to show ads to people based on their age, gender and ethnicity without specifically identifying the person. Using small facial cues,the company says it can then provide information to advertisers about a persons reaction to a product. An announcement in July that it plans to equip rideshare drivers with tablets to target ads to passengers caught the attention of two U.S. senators. Democrats Amy Klobuchar and Richard Blumenthalfired off a letter to the heads of the ride-hailing companies, claiming the program raises serious concerns about privacy for your passengers. Uber Technologies Inc. said in a statement to Bloomberg that it has no business relationship with Alfi the company contracts with the drivers directly and that drivers must comply with local laws and regulations. Lyft Inc. echoed the sentiment, and added that drivers may be deactivated if they collect passenger information in violation of local laws. Alfi, founded in 2018 and based in Miami Beach, Florida, insists it doesnt violate any privacy rules and is compliant with Europes General Data Protection Regulation, which imposes strict regulations on data collection, and Californias Consumer Privacy Act, which allows consumers to see all the data collected on them. The company says its system makes no attempt to identify viewers, doesnt save images, and targets ads in an ethical and privacy-compliant manner. No viewer is ever required or requested to enter any information about themselves on any Alfi-enabled device, according to the company. We only use a sensor to detect simple metrics like age and gender, said Paul Pereira, founder and chief executive officer of Alfi, in an interview. Just the fact that we can pick up a gender on a predictive model without violating privacy puts us 50% ahead of everything thats out there in the market today. Read More: Activists Urge Retailers to Halt Facial Recognition Use. To reiterate that its not collecting personal information, Alfi makes the distinction that it uses facial detection, which analyzes demographics and emotions, not facial recognition, which stores data to identify an individual. But data privacy advocates warn that whatever its called, the technology inherently invites abuse. Alfi goes out of its way to say that it doesnt gather images or recordings, but thats not to say it cant, and there are no laws that would require the company to disclose whether or not they did start gathering this information, said Caitlin Seeley George, campaign director at Fight for the Future, an activist group. Selling user data, another flash point for tech companies, is also part of Alfis long-term strategy. Cameras in the hardware monitor viewers reactions to the content in order to provide insights to advertisers. The company said subscriptions to engagement data including retina tracking, keyword recognition, voice intonation, and demographics will be sold to third parties without compromising the identity of the end user. Brazils Sao Paulo airport already features some Alfi reactive screens and the company is expanding its tablet program for ride-hailing vehicles, which was in testing mode with about 500 drivers in South Florida, to about 13 markets in the U.S. The company aims to install 150,000 facial recognition screens in the back of rideshare vehicles by the end of next year. More than 50,000 drivers have joined the wait-list to receive one of Alfis Lenovo Group Ltd. tablets, Pereira said. Theyre driven by the promise of commissions as high as $325 a month, though some drivers whove been using Alfi screens in the initial early rollout have had trouble receiving pay, and others are skeptical about how the model will work. Ive had it for almost two months and also havent received any pay, or any sort of news from Alfi on how we get paid, said a Miami-area rideshare driver who spoke on the condition of anonymity for fear of continued payment delays. Pereira said that while a driver payment system is fully operational, it hasnt been used yet, because many advertising deals and other revenue streams are still pending. In the past, some drivers were given pre-paid gift cards, he said. Indeed, Alfis monetization plans are still in the early stages. Alfi reported second-quarter revenue of less than $1,000 and a net loss of almost $5 million. A spokesperson said the out-of-home advertising market was severely impacted by Covid-19 but that Alfi has multiple customers coming onto the platform. The company expects to start reaping revenue from advertising in the third quarter. When it announced the national rollout of its rideshare partner program earlier this month, Alfis stock jumped 40%. The company, which became publicly traded in May, is no stranger to extreme share price moves as a meme stock, buffeted by retail traders who exchange news and rumors on internet message boards such as Reddits ALFISTOCK forum. Pereira said that retail traders are the majority of their base but that may not be such a bad thing. These retail traders possibly helped bring Alfi back from the brink of collapse. At the end of March 2021, Alfis total current assets sat at about $113,000, and its auditors found substantial doubt about its ability to continue. By the end of June, the company was flush with $20 million in cash thanks to an initial public offering and a share price that has doubled since its listing." ;
+    fria:hasPurposesAndContextDescription "Privacy" ;
+    fria:reportDate "2023-07-03"^^xsd:date ;
+    fria:hasAIAAICLink "https://www.aiaaic.org/aiaaic-repository/ai-algorithmic-and-automation-incidents/alfi-personalised-real-time-advertising" .
+
+# Challenge 1: Presumption of innocence and right to an effective remedy and to a fair trial
+fria:FRIA-reportChallenge1 a fria:FRIA-reportChallenge ;
+    rdfs:comment "Presumption of innocence and right to an effective remedy and to a fair trial." .
+
+fria:FRIA-reportChallenge11 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation11 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel11 ;
+    rdfs:comment "The AI system does not communicate that a decision/advice or outcome is the result of an algorithmic decision." ;
+    owl:equivalentClass airo:Transparency, vair:OperatingCriticalDigitalInfrastructure .
+
+fria:FRIA-reportEvaluation11 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The incident highlighted a lack of transparency in the AI system's decision-making process." .
+
+fria:FRIA-reportImpactLevel11 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High impact due to potential misuse and misunderstanding of AI-generated content." .
+
+fria:FRIA-reportChallenge12 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation12 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel12 ;
+    rdfs:comment "The AI system does not provide percentages or other indication on the degree of likelihood that the outcome is correct/incorrect, prejudicing the user that there is no possibility of error and therefore that the outcome is undoubtedly incriminating." .
+
+fria:FRIA-reportEvaluation12 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The system's lack of probabilistic output leads to over-reliance on its decisions." .
+
+fria:FRIA-reportImpactLevel12 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High impact as it could result in following inaccurate or misleading AI-generated classifications." .
+
+fria:FRIA-reportChallenge13 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation13 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel13 ;
+    rdfs:comment "The AI system produces an outcome that forces a reversal of burden of proof upon the suspect, by presenting itself as an absolute truth, practically depriving the defense of any chance to counter it." ;
+    owl:equivalentClass vair:DetectingEmotionalState .
+
+fria:FRIA-reportEvaluation13 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The system's deterministic output shifts the burden of proof onto the suspect." .
+
+fria:FRIA-reportImpactLevel13 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High impact due to potential misuse and harm from misleading AI-generated classifications." .
+
+fria:FRIA-reportChallenge14 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation14 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel14 ;
+    rdfs:comment "There is no explanation of reasons and criteria behind a certain output of the AI system that the user can understand." .
+
+fria:FRIA-reportEvaluation14 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "Users are unable to understand the decision-making process of the AI system." .
+
+fria:FRIA-reportImpactLevel14 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Medium impact as it leads to user frustration and lack of trust." .
+
+fria:FRIA-reportChallenge15 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation15 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel15 ;
+    rdfs:comment "There is no indication of the extent to which the AI system influences the overall decision-making process." .
+
+fria:FRIA-reportEvaluation15 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The system's influence on decision-making is not transparent." .
+
+fria:FRIA-reportImpactLevel15 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Medium impact as it obscures accountability." .
+
+fria:FRIA-reportChallenge16 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation16 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel16 ;
+    rdfs:comment "There is no set of measures that allow for redress in case of the occurrence of any harm or adverse impact." ;
+    owl:equivalentClass vair:InsurancePricing .
+
+fria:FRIA-reportEvaluation16 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There are no measures for users to seek redress in case of harm." .
+
+fria:FRIA-reportImpactLevel16 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High impact due to lack of recourse for affected individuals." .
+
+# Challenge 2: Non-discrimination and prevention of bias
+fria:FRIA-reportChallenge2 a fria:FRIA-reportChallenge ;
+    rdfs:comment "Non-discrimination and prevention of bias." .
+
+fria:FRIA-reportChallenge21 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation21 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel21 ;
+    rdfs:comment "The dataset that was used to train the AI system did not include potentially marginalized groups (e.g. persons with disabilities)." .
+
+fria:FRIA-reportEvaluation21 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The training dataset excluded marginalized groups." .
+
+fria:FRIA-reportImpactLevel21 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Medium impact due to lack of inclusivity." .
+
+fria:FRIA-reportChallenge22 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation22 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel22 ;
+    rdfs:comment "The development and testing phases of the AI system were not subject to guidance and checks to avoid bias." .
+
+fria:FRIA-reportEvaluation22 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "Bias checks were not conducted during development and testing." .
+
+fria:FRIA-reportImpactLevel22 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Medium impact due to potential biases in AI decisions." .
+
+fria:FRIA-reportChallenge23 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation23 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel23 ;
+    rdfs:comment "There is no reference to the inclusion of potentially marginalized groups in datasets, and a lack of guidance to avoid bias in algorithm development and testing." ;
+    owl:equivalentClass vair:RiskAssessment .
+
+fria:FRIA-reportEvaluation23 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The system fails to account for marginalized groups in its dataset." .
+
+fria:FRIA-reportImpactLevel23 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Medium impact due to lack of inclusivity." .
+
+# Challenge 3: Freedom of expression and information.
+fria:FRIA-reportChallenge3 a fria:FRIA-reportChallenge ;
+    rdfs:comment "Freedom of expression and information." .
+
+fria:FRIA-reportChallenge31 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation31 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel31 ;
+    rdfs:comment "There is no mechanism to limit the deployment of the AI system to suspected individuals." .
+
+fria:FRIA-reportEvaluation31 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The system lacks mechanisms to limit deployment to only suspected individuals." .
+
+fria:FRIA-reportImpactLevel31 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Medium impact due to potential overreach." .
+
+fria:FRIA-reportChallenge32 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation32 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel32 ;
+    rdfs:comment "The data stored, recorded, and produced are not easily accessible to concerned individuals." .
+
+fria:FRIA-reportEvaluation32 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "Individuals could not easily verify the authenticity of the information generated by the AI." .
+
+fria:FRIA-reportImpactLevel32 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Medium impact due to difficulties faced by individuals in accessing and verifying data." .
+
+# Challenge 3: Right to respect for private and family life and right to protection of personal data.
+fria:FRIA-reportChallenge4 a fria:FRIA-reportChallenge ;
+    rdfs:comment "Right to respect for private and family life and right to protection of personal data." .
+
+fria:FRIA-reportChallenge41 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation41 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel41 ;
+    rdfs:comment "There are no mechanisms for the user to exercise control over the processing of personal data." .
+
+fria:FRIA-reportEvaluation41 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "Users have no control over how their personal data is processed." .
+
+fria:FRIA-reportImpactLevel41 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High impact as it affects user privacy." .
+
+fria:FRIA-reportChallenge42 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation42 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel42 ;
+    rdfs:comment "There are no measures to ensure the lawfulness of the processing of personal data." ;
+    owl:equivalentClass airo:PublicService .
+
+fria:FRIA-reportEvaluation42 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The system does not ensure that personal data is processed lawfully." .
+
+fria:FRIA-reportImpactLevel42 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High impact as it risks violating data protection laws." .
+
+fria:FRIA-reportChallenge43 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation43 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel43 ;
+    rdfs:comment "There are no procedures to limit the access to personal data and to the extent and amount necessary for those purposes." ;
+    owl:equivalentClass airo:Managing .
+
+fria:FRIA-reportEvaluation43 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The system lacks procedures to limit access to personal data." .
+
+fria:FRIA-reportImpactLevel43 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High impact as it could lead to unauthorized access to sensitive data." .
+
+fria:FRIA-reportChallenge44 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation44 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel44 ;
+    rdfs:comment "There is no mechanism allowing to comply with the exercise of data subject’s rights (access, rectification and erasure of data relating to a specific individual)." .
+
+fria:FRIA-reportEvaluation44 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The system does not provide mechanisms to exercise data subject rights." .
+
+fria:FRIA-reportImpactLevel44 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High impact as it infringes on individual data rights." .
+
+fria:FRIA-reportChallenge45 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation45 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel45 ;
+    rdfs:comment "There are no specific measures in place to enhance the security of the processing of personal data (via encryption, anonymisation and aggregation)." ;
+    owl:equivalentClass vair:ApplyingTheLawToFacts .
+
+fria:FRIA-reportEvaluation45 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The system lacks specific security measures for personal data." .
+
+fria:FRIA-reportImpactLevel45 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High impact due to potential data breaches." .
+
+fria:FRIA-reportChallenge46 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation46 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel46 ;
+    rdfs:comment "There is no procedure to conduct a data protection impact assessment." ;
+    owl:equivalentClass airo:Monitoring .
+
+fria:FRIA-reportEvaluation46 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The system does not have procedures for conducting data protection impact assessments." .
+
+fria:FRIA-reportImpactLevel46 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High impact as it risks non-compliance with data protection regulations." .

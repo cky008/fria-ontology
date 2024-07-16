@@ -1,0 +1,230 @@
+@prefix fria: <http://www.example.org/fria-report> .
+@prefix airo: <https://w3id.org/airo#> .
+@prefix vair: <https://w3id.org/vair#> .
+@prefix cids: <http://www.example.org/cids#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+fria:FRIA-report-3D-masks-fool-facial-recognition a fria:FRIA-report ;
+    fria:hasReportName "3D masks fool payment, airport facial recognition systems" ;
+    fria:hasOrganisationPositionDescription "Kneron, an artificial intelligence company, conducted the research" ;
+    fria:hasContributorDetails "Researchers from Kneron, including CEO Albert Liu" ;
+    fria:hasAssessmentContent "Researchers found that facial recognition technology can be fooled by using 3D-printed masks depicting different people's faces. The test involved visiting public locations and tricking facial recognition terminals into allowing payment or access. The masks were able to fool payment systems and border checkpoints in China and the Netherlands." ;
+    fria:hasTechnologyAndDataDescription "Facial recognition technology used in payment systems, airport security, and transportation hubs" ;
+    fria:hasPurposesAndContextDescription "To test the security and reliability of facial recognition systems in public spaces and payment systems" ;
+    fria:reportDate "2023-10-10"^^xsd:date ;
+    fria:hasAIAAICLink "https://www.aiaaic.org/aiaaic-repository/ai-algorithmic-and-automation-incidents/3d-masks-fool-payment-airport-facial-recognition-systems" .
+
+fria:FRIA-reportChallenge11 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation11 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel11 ;
+    rdfs:comment "The AI system does not communicate that a decision/advice or outcome is the result of an algorithmic decision" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 ;
+    owl:equivalentClass airo:Transparency, vair:OperatingCriticalDigitalInfrastructure .
+
+fria:FRIA-reportEvaluation11 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The facial recognition systems tested did not indicate that they were using AI for identification." .
+
+fria:FRIA-reportImpactLevel11 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge12 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation12 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel12 ;
+    rdfs:comment "The AI system does not provide percentages or other indication on the degree of likelihood that the outcome is correct/incorrect, prejudicing the user that there is no possibility of error and therefore that the outcome is undoubtedly incriminating" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 .
+
+fria:FRIA-reportEvaluation12 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The facial recognition systems tested did not provide confidence scores or error rates." .
+
+fria:FRIA-reportImpactLevel12 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge13 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation13 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel13 ;
+    rdfs:comment "The AI system produces an outcome that forces a reversal of burden of proof upon the suspect, by presenting itself as an absolute truth, practically depriving the defence of any chance to counter it" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 ;
+    owl:equivalentClass vair:DetectingEmotionalState .
+
+fria:FRIA-reportEvaluation13 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The facial recognition systems presented their results as absolute truth, with no apparent way for individuals to contest false positives." .
+
+fria:FRIA-reportImpactLevel13 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge14 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation14 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel14 ;
+    rdfs:comment "There is no explanation of reasons and criteria behind a certain output of the AI system that the user can understand" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 .
+
+fria:FRIA-reportEvaluation14 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The facial recognition systems provided no explanation for their decisions." .
+
+fria:FRIA-reportImpactLevel14 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge15 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation15 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel15 ;
+    rdfs:comment "There is no indication of the extent to which the AI system influences the overall decision-making process" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 .
+
+fria:FRIA-reportEvaluation15 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The role of facial recognition in the overall security process was not clear." .
+
+fria:FRIA-reportImpactLevel15 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Medium" .
+
+fria:FRIA-reportChallenge16 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation16 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel16 ;
+    rdfs:comment "There is no set of measures that allow for redress in case of the occurrence of any harm or adverse impact" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 ;
+    owl:equivalentClass vair:InsurancePricing .
+
+fria:FRIA-reportEvaluation16 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "No information was provided about how individuals could contest or correct false identifications." .
+
+fria:FRIA-reportImpactLevel16 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge21 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation21 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel21 ;
+    rdfs:comment "The AI system targets members of a specific social group" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge2 ;
+    owl:equivalentClass airo:PrivateService, vair:ControllingSafetyOfRoadTrafficManagement .
+
+fria:FRIA-reportEvaluation21 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The facial recognition systems may have biases based on race, age, or other factors, though this was not specifically tested in the reported experiment." .
+
+fria:FRIA-reportImpactLevel21 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Medium" .
+
+fria:FRIA-reportChallenge22 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation22 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel22 ;
+    rdfs:comment "There are no mechanisms to flag and correct issues related to bias, discrimination, or poor performance" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge2 .
+
+fria:FRIA-reportEvaluation22 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There are no apparent mechanisms to flag and correct issues related to bias, discrimination, or poor performance in the facial recognition systems tested." .
+
+fria:FRIA-reportImpactLevel22 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge23 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation23 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel23 ;
+    rdfs:comment "The AI system does not consider the diversity and representativeness for specific population or problematic use cases" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge2 .
+
+fria:FRIA-reportEvaluation23 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The vulnerability to 3D masks suggests a lack of consideration for diverse attack scenarios." .
+
+fria:FRIA-reportImpactLevel23 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge31 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation31 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel31 ;
+    rdfs:comment "There is no mechanism to limit the deployment of the AI system to suspected individuals" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge3 .
+
+fria:FRIA-reportEvaluation31 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The facial recognition systems were used on the general public in airports and payment systems." .
+
+fria:FRIA-reportImpactLevel31 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge32 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation32 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel32 ;
+    rdfs:comment "The data stored, recorded, and produced are not easily accessible to concerned individuals" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge3 .
+
+fria:FRIA-reportEvaluation32 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "No information was provided about data access or transparency." .
+
+fria:FRIA-reportImpactLevel32 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge41 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation41 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel41 ;
+    rdfs:comment "There are no mechanisms for the user to exercise control over the processing of personal data" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 .
+
+fria:FRIA-reportEvaluation41 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There are no apparent mechanisms for users to exercise control over the processing of their personal data in these facial recognition systems." .
+
+fria:FRIA-reportImpactLevel41 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Very High" .
+
+fria:FRIA-reportChallenge42 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation42 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel42 ;
+    rdfs:comment "There are no measures to ensure the lawfulness of the processing of personal data" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass airo:PublicService .
+
+fria:FRIA-reportEvaluation42 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The vulnerability to spoofing attacks raises questions about the legal compliance of these systems." .
+
+fria:FRIA-reportImpactLevel42 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge43 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation43 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel43 ;
+    rdfs:comment "There are no procedures to limit the access to personal data and to the extent and amount necessary for those purposes" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass airo:Managing .
+
+fria:FRIA-reportEvaluation43 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The vulnerability to spoofing attacks suggests inadequate data protection measures." .
+
+fria:FRIA-reportImpactLevel43 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge44 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation44 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel44 ;
+    rdfs:comment "There is no mechanism allowing to comply with the exercise of data subject's rights (access, rectification and erasure of data relating to a specific individual)" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 .
+
+fria:FRIA-reportEvaluation44 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There is no apparent mechanism allowing compliance with the exercise of data subject's rights (access, rectification, and erasure of data relating to a specific individual)." .
+
+fria:FRIA-reportImpactLevel44 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge45 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation45 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel45 ;
+    rdfs:comment "There are no specific measures in place to enhance the security of the processing of personal data (via encryption, anonymisation and aggregation)" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass vair:ApplyingTheLawToFacts .
+
+fria:FRIA-reportEvaluation45 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The vulnerability to spoofing attacks suggests inadequate security measures for the processing of personal data." .
+
+fria:FRIA-reportImpactLevel45 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Very High" .
+
+fria:FRIA-reportChallenge46 a fria:FRIA-reportChallenge ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation46 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel46 ;
+    rdfs:comment "There is no procedure to conduct a data protection impact assessment" ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass airo:Monitoring .
+
+fria:FRIA-reportEvaluation46 a fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There is no apparent procedure to conduct a data protection impact assessment for these facial recognition systems." .
+
+fria:FRIA-reportImpactLevel46 a fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .

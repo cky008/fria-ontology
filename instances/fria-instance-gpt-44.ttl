@@ -1,0 +1,224 @@
+@prefix fria: <http://www.example.org/fria-report> .
+@prefix airo: <https://w3id.org/airo#> .
+@prefix vair: <https://w3id.org/vair#> .
+@prefix cids: <http://www.example.org/cids#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Basic Things
+fria:Amazon-India-Search-Rigging-Report a fria:FRIA-report ;
+    fria:hasReportName "Amazon India own brand search engine rigging" ;
+    fria:hasOrganisationPositionDescription "Search engine algorithm" ;
+    fria:hasContributorDetails "Amazon, Diego Piacentini, Russell Grandinetti, Amit Nanda, U.S. Congress, FTC, Reuters" ;
+    fria:hasAssessmentContent "Reuters has obtained thousands of pages of internal Amazon documents that show Amazon India systematically copied other companies' products and promoted them by manipulating search results on Amazon.in. This involved techniques such as 'search seeding' and 'search sparkles' to ensure Amazon's private label products, like AmazonBasics and Solimo, appeared among the top search results." ;
+    fria:hasTechnologyAndDataDescription "Search seeding, search sparkles, and internal data analysis of third-party products to develop and promote Amazon's own products." ;
+    fria:hasPurposesAndContextDescription "Rank content/search results" ;
+    fria:reportDate "2022-03-31"^^xsd:date ;
+    fria:hasAIAAICLink "https://www.aiaaic.org/aiaaic-repository/ai-algorithmic-and-automation-incidents/amazon-india-search-rigging" .
+
+# Challenge Related
+fria:FRIA-reportChallenge a rdfs:Class ;
+    rdfs:comment "A class representing a challenge in the FRIA report." .
+
+fria:FRIA-reportEvaluation a rdfs:Class ;
+    rdfs:comment "A class representing an evaluation of a FRIA report challenge." .
+
+fria:FRIA-reportImpactLevel a rdfs:Class ;
+    rdfs:comment "A class representing the impact level of a FRIA report challenge." .
+
+fria:FRIA-reporthasEvaluation a rdf:Property ;
+    rdfs:domain fria:FRIA-reportChallenge ;
+    rdfs:range fria:FRIA-reportEvaluation ;
+    rdfs:comment "A property linking a FRIA report challenge to its evaluation." .
+
+fria:FRIA-reporthasImpactLevel a rdf:Property ;
+    rdfs:domain fria:FRIA-reportChallenge ;
+    rdfs:range fria:FRIA-reportImpactLevel ;
+    rdfs:comment "A property linking a FRIA report challenge to its impact level." .
+
+fria:hasEvaluationContent a rdf:Property ;
+    rdfs:domain fria:FRIA-reportEvaluation ;
+    rdfs:range xsd:string ;
+    rdfs:comment "A property to hold the content of the evaluation." .
+
+fria:hasImpactLevelContent a rdf:Property ;
+    rdfs:domain fria:FRIA-reportImpactLevel ;
+    rdfs:range xsd:string ;
+    rdfs:comment "A property to hold the content of the impact level." .
+
+# Challenge 1
+fria:FRIA-reportChallenge1 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportChallenge ;
+    rdfs:comment "Right to fair competition." .
+
+fria:FRIA-reportEvaluation11 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "Amazon India manipulated search results to favor its own private-label products, giving them an unfair advantage over competitors." .
+
+fria:FRIA-reportImpactLevel11 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High impact due to distortion of competitive market dynamics." .
+
+fria:FRIA-reportChallenge11 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation11 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel11 ;
+    rdfs:comment "Manipulating search results to favor Amazon's products disrupts fair competition." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 ;
+    owl:equivalentClass airo:Fairness .
+
+fria:FRIA-reportEvaluation12 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "Amazon employees used internal data to copy successful third-party products, undermining fair competition." .
+
+fria:FRIA-reportImpactLevel12 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High impact due to unfair use of proprietary data." .
+
+fria:FRIA-reportChallenge12 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation12 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel12 ;
+    rdfs:comment "Using internal data to replicate third-party products compromises market fairness." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 ;
+    owl:equivalentClass airo:Ethics .
+
+# Challenge 2
+fria:FRIA-reportChallenge2 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportChallenge ;
+    rdfs:comment "Right to intellectual property." .
+
+fria:FRIA-reportEvaluation21 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "Amazon's strategy of copying third-party products infringes on intellectual property rights." .
+
+fria:FRIA-reportImpactLevel21 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High impact due to intellectual property infringement." .
+
+fria:FRIA-reportChallenge21 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation21 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel21 ;
+    rdfs:comment "Copying products infringes on third-party intellectual property rights." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge2 ;
+    owl:equivalentClass vair:IPAbuse .
+
+# Challenge 3
+fria:FRIA-reportChallenge3 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportChallenge ;
+    rdfs:comment "Right to transparency." .
+
+fria:FRIA-reportEvaluation31 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "Amazon's practices of search seeding and sparkles were not transparent to third-party sellers or customers." .
+
+fria:FRIA-reportImpactLevel31 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High impact due to lack of transparency in search result manipulation." .
+
+fria:FRIA-reportChallenge31 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation31 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel31 ;
+    rdfs:comment "Non-transparent manipulation of search results affects trust and fairness." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge3 ;
+    owl:equivalentClass airo:Transparency .
+
+# Challenge 4
+fria:FRIA-reportChallenge4 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportChallenge ;
+    rdfs:comment "Right to a fair marketplace." .
+
+fria:FRIA-reportEvaluation41 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "Amazon's dual role as a marketplace operator and seller of its own brands gives it undue advantage over other sellers." .
+
+fria:FRIA-reportImpactLevel41 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High impact due to conflict of interest in marketplace operations." .
+
+fria:FRIA-reportChallenge41 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation41 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel41 ;
+    rdfs:comment "Amazon's conflict of interest as both a marketplace operator and seller harms fair marketplace principles." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass vair:Competition .
+
+fria:FRIA-reportEvaluation42 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The manipulation of search results to favor Amazon's private brands disadvantages other sellers." .
+
+fria:FRIA-reportImpactLevel42 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High impact due to anti-competitive practices." .
+
+fria:FRIA-reportChallenge42 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation42 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel42 ;
+    rdfs:comment "Search result manipulation creates an unfair competitive environment." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass vair:ApplyingTheLawToFacts .
+
+# Additional Challenges
+fria:FRIA-reportChallenge43 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation43 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel43 ;
+    rdfs:comment "There are no procedures to limit the access to personal data to the extent and amount necessary for those purposes." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass airo:Managing .
+
+fria:FRIA-reportEvaluation43 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There are no procedures to limit the access to personal data to the extent and amount necessary for those purposes." .
+
+fria:FRIA-reportImpactLevel43 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High impact due to lack of control over personal data." .
+
+fria:FRIA-reportChallenge44 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation44 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel44 ;
+    rdfs:comment "There is no clear mechanism for users to refuse police requests for footage without fear of repercussions." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 .
+
+fria:FRIA-reportEvaluation44 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There is no clear mechanism for users to refuse police requests for footage without fear of repercussions." .
+
+fria:FRIA-reportImpactLevel44 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High impact due to lack of control over personal data sharing." .
+
+fria:FRIA-reportChallenge45 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation45 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel45 ;
+    rdfs:comment "Amazon Ring systems lack specific security measures to ensure data protection in the event of unauthorized access." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass vair:ApplyingTheLawToFacts .
+
+fria:FRIA-reportEvaluation45 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "Amazon Ring systems lack specific security measures to ensure data protection in the event of unauthorized access." .
+
+fria:FRIA-reportImpactLevel45 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High impact due to potential security vulnerabilities." .
+
+fria:FRIA-reportChallenge46 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation46 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel46 ;
+    rdfs:comment "There is no procedure to conduct a data protection impact assessment." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass airo:Monitoring .
+
+fria:FRIA-reportEvaluation46 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "Amazon Ring systems lack a procedure to conduct a data protection impact assessment." .
+
+fria:FRIA-reportImpactLevel46 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High impact due to lack of impact assessment procedures." .
+
+# Closing brackets
+<https://w3id.org/airo#Monitoring> rdfs:subClassOf fria:FRIA-reportChallenge4 .
+<https://w3id.org/vair#ControllingSafetyOfRoadTrafficManagement> rdfs:subClassOf fria:FRIA-reportChallenge1 .
+<https://w3id.org/airo#Transparency> rdfs:subClassOf fria:FRIA-reportChallenge2 .

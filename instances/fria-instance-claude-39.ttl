@@ -1,0 +1,280 @@
+@prefix fria: <http://www.example.org/fria-report> .
+@prefix airo: <https://w3id.org/airo#> .
+@prefix vair: <https://w3id.org/vair#> .
+@prefix cids: <http://www.example.org/cids#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+fria:Amazon-Echo-Dot-Kids-Privacy-Report a fria:FRIA-report ;
+    fria:hasReportName "Amazon Echo Dot Kids remembers kids' conversations" ;
+    fria:hasOrganisationPositionDescription "Speech recognition, Natural language understanding (NLU)" ;
+    fria:hasContributorDetails "Amazon, Campaign for a Commercial-Free Childhood (CCFC), Center for Digital Democracy (CDD), Georgetown University's Institute for Public Representation" ;
+    fria:hasAssessmentContent "Privacy groups filed a complaint with the FTC alleging that Amazon's Echo Dot Kids violates COPPA by collecting and retaining children's personal information without adequate parental consent. The device allegedly keeps voice recordings and transcripts even after parents attempt to delete them." ;
+    fria:hasTechnologyAndDataDescription "Voice-activated smart speaker with AI assistant, designed for children" ;
+    fria:hasPurposesAndContextDescription "Provide information, services" ;
+    fria:reportDate "2019-05-09"^^xsd:date ;
+    fria:hasAIAAICLink "https://www.aiaaic.org/aiaaic-repository/ai-algorithmic-and-automation-incidents/amazon-echo-dot-kids-remembers-kids-conversations" .
+
+fria:FRIA-reportChallenge1 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportChallenge ;
+    rdfs:comment "Presumption of innocence and right to an effective remedy and to a fair trial." .
+
+fria:FRIA-reportEvaluation11 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The Echo Dot Kids device does not clearly communicate to parents or children that it is recording and retaining conversations." .
+
+fria:FRIA-reportImpactLevel11 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge11 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation11 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel11 ;
+    rdfs:comment "The AI system does not communicate that a decision/advice or outcome is the result of an algorithmic decision." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 ;
+    owl:equivalentClass airo:Transparency, vair:OperatingCriticalDigitalInfrastructure .
+
+fria:FRIA-reportEvaluation12 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The system does not provide clear information about the potential for errors or misuse of children's data." .
+
+fria:FRIA-reportImpactLevel12 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge12 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation12 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel12 ;
+    rdfs:comment "The AI system does not provide percentages or other indication on the degree of likelihood that the outcome is correct/incorrect, prejudicing the user that there is no possibility of error and therefore that the outcome is undoubtedly incriminating." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 .
+
+fria:FRIA-reportEvaluation13 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The device retains children's personal information even after parents attempt to delete it, presenting the retention as an unalterable fact." .
+
+fria:FRIA-reportImpactLevel13 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Very High" .
+
+fria:FRIA-reportChallenge13 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation13 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel13 ;
+    rdfs:comment "The AI system produces an outcome that forces a reversal of burden of proof upon the suspect, by presenting itself as an absolute truth, practically depriving the defence of any chance to counter it." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 ;
+    owl:equivalentClass vair:DetectingEmotionalState .
+
+fria:FRIA-reportEvaluation14 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There is no clear explanation provided to parents about why children's data is retained or how it is used." .
+
+fria:FRIA-reportImpactLevel14 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge14 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation14 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel14 ;
+    rdfs:comment "There is no explanation of reasons and criteria behind a certain output of the AI system that the user can understand." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 .
+
+fria:FRIA-reportEvaluation15 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The extent to which the Echo Dot Kids influences children's behavior and data collection is not clearly communicated to parents." .
+
+fria:FRIA-reportImpactLevel15 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Medium" .
+
+fria:FRIA-reportChallenge15 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation15 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel15 ;
+    rdfs:comment "There is no indication of the extent to which the AI system influences the overall decision-making process." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 .
+
+fria:FRIA-reportEvaluation16 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There are no clear measures for redress or compensation if children's data is misused or improperly retained." .
+
+fria:FRIA-reportImpactLevel16 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge16 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation16 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel16 ;
+    rdfs:comment "There is no set of measures that allow for redress in case of the occurrence of any harm or adverse impact." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 ;
+    owl:equivalentClass vair:InsurancePricing .
+
+fria:FRIA-reportChallenge2 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportChallenge ;
+    rdfs:comment "Right to Right to equality and non-discrimination." .
+
+fria:FRIA-reportEvaluation21 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The Echo Dot Kids may disproportionately affect children's privacy rights compared to adult users of similar devices." .
+
+fria:FRIA-reportImpactLevel21 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge21 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation21 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel21 ;
+    rdfs:comment "The AI system targets members of a specific social group." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge2 ;
+    owl:equivalentClass airo:PrivateService, vair:ControllingSafetyOfRoadTrafficManagement .
+
+fria:FRIA-reportEvaluation22 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There are no apparent mechanisms to identify and correct biases in the data collection or processing of children's information." .
+
+fria:FRIA-reportImpactLevel22 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Medium" .
+
+fria:FRIA-reportChallenge22 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation22 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel22 ;
+    rdfs:comment "There are no mechanisms to flag and correct issues related to bias, discrimination, or poor performance." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge2 .
+
+fria:FRIA-reportEvaluation23 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The system does not appear to consider the diverse needs and vulnerabilities of different child users." .
+
+fria:FRIA-reportImpactLevel23 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Medium" .
+
+fria:FRIA-reportChallenge23 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation23 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel23 ;
+    rdfs:comment "The AI system does not consider the diversity and representativeness for specific population or problematic use cases." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge2 .
+
+fria:FRIA-reportChallenge3 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportChallenge ;
+    rdfs:comment "Freedom of expression and information." .
+
+fria:FRIA-reportEvaluation31 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The constant recording and retention of children's conversations may inhibit their freedom of expression within their own homes." .
+
+fria:FRIA-reportImpactLevel31 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge31 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation31 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel31 ;
+    rdfs:comment "There is no mechanism to limit the deployment of the AI system to suspected individuals." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge3 .
+
+fria:FRIA-reportEvaluation32 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "Children and parents do not have easy access to the data collected about them, limiting their right to information." .
+
+fria:FRIA-reportImpactLevel32 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge32 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation32 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel32 ;
+    rdfs:comment "The data stored, recorded, and produced are not easily accessible to concerned individuals." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge3 .
+
+fria:FRIA-reportChallenge4 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportChallenge ;
+    rdfs:comment "Right to respect for private and family life and right to protection of personal data." .
+
+fria:FRIA-reportEvaluation41 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The Echo Dot Kids collects and retains children's personal data without adequate parental consent or control." .
+
+fria:FRIA-reportImpactLevel41 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Very High" .
+
+fria:FRIA-reportChallenge41 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation41 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel41 ;
+    rdfs:comment "There are no mechanisms for the user to exercise control over the processing of personal data." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 .
+
+fria:FRIA-reportEvaluation42 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The lawfulness of collecting and retaining children's data without proper consent is questionable under COPPA regulations." .
+
+fria:FRIA-reportImpactLevel42 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Very High" .
+
+fria:FRIA-reportChallenge42 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation42 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel42 ;
+    rdfs:comment "There are no measures to ensure the lawfulness of the processing of personal data." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass airo:PublicService .
+
+fria:FRIA-reportEvaluation43 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There are no clear procedures to limit access to children's data to only necessary parties and purposes." .
+
+fria:FRIA-reportImpactLevel43 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge43 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation43 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel43 ;
+    rdfs:comment "There are no procedures to limit the access to personal data and to the extent and amount necessary for those purposes." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass airo:Managing .
+
+fria:FRIA-reportEvaluation44 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "Parents are unable to fully delete their children's personal data from the Echo Dot Kids system." .
+
+fria:FRIA-reportImpactLevel44 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Very High" .
+
+fria:FRIA-reportChallenge44 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation44 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel44 ;
+    rdfs:comment "There is no mechanism allowing to comply with the exercise of data subject's rights (access, rectification and erasure of data relating to a specific individual)." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 .
+
+fria:FRIA-reportEvaluation45 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There are no specific measures mentioned to enhance the security of children's personal data processing and storage." .
+
+fria:FRIA-reportImpactLevel45 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge45 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation45 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel45 ;
+    rdfs:comment "There are no specific measures in place to enhance the security of the processing of personal data (via encryption, anonymisation and aggregation)." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass vair:ApplyingTheLawToFacts .
+
+fria:FRIA-reportEvaluation46 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There is no indication that a comprehensive data protection impact assessment has been conducted for the Echo Dot Kids, particularly regarding its potential privacy implications for children." .
+
+fria:FRIA-reportImpactLevel46 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Very High" .
+
+fria:FRIA-reportChallenge46 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation46 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel46 ;
+    rdfs:comment "There is no procedure to conduct a data protection impact assessment." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass airo:Monitoring .

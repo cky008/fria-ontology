@@ -1,0 +1,280 @@
+@prefix fria: <http://www.example.org/fria-report> .
+@prefix airo: <https://w3id.org/airo#> .
+@prefix vair: <https://w3id.org/vair#> .
+@prefix cids: <http://www.example.org/cids#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+fria:Amazon-Ring-Employee-Spying-Report a fria:FRIA-report ;
+    fria:hasReportName "Amazon employees use Ring to spy on customers" ;
+    fria:hasOrganisationPositionDescription "CCTV, Computer vision" ;
+    fria:hasContributorDetails "Amazon, Ring, Federal Trade Commission (FTC)" ;
+    fria:hasAssessmentContent "Employees at Amazon Ring and a Ukrainian contractor were able to access and download customer videos without restriction, viewing thousands of videos from female users in intimate spaces. This privacy violation resulted in a $5.8 million fine from the FTC." ;
+    fria:hasTechnologyAndDataDescription "Ring doorbell cameras and associated video storage systems" ;
+    fria:hasPurposesAndContextDescription "Strengthen security" ;
+    fria:reportDate "2023-05-31"^^xsd:date ;
+    fria:hasAIAAICLink "https://www.aiaaic.org/aiaaic-repository/ai-algorithmic-and-automation-incidents/amazon-employees-use-ring-to-spy-on-customers" .
+
+fria:FRIA-reportChallenge1 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportChallenge ;
+    rdfs:comment "Presumption of innocence and right to an effective remedy and to a fair trial." .
+
+fria:FRIA-reportEvaluation11 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "Ring did not clearly communicate to customers that employees had unrestricted access to their private videos." .
+
+fria:FRIA-reportImpactLevel11 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Very High" .
+
+fria:FRIA-reportChallenge11 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation11 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel11 ;
+    rdfs:comment "The AI system does not communicate that a decision/advice or outcome is the result of an algorithmic decision." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 ;
+    owl:equivalentClass airo:Transparency, vair:OperatingCriticalDigitalInfrastructure .
+
+fria:FRIA-reportEvaluation12 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The system did not provide any indication of the potential for misuse or unauthorized access to customer data." .
+
+fria:FRIA-reportImpactLevel12 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge12 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation12 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel12 ;
+    rdfs:comment "The AI system does not provide percentages or other indication on the degree of likelihood that the outcome is correct/incorrect, prejudicing the user that there is no possibility of error and therefore that the outcome is undoubtedly incriminating." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 .
+
+fria:FRIA-reportEvaluation13 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "Ring's system allowed employees to access and view customer videos without any justification or customer consent, presenting this access as a normal part of operations." .
+
+fria:FRIA-reportImpactLevel13 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Very High" .
+
+fria:FRIA-reportChallenge13 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation13 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel13 ;
+    rdfs:comment "The AI system produces an outcome that forces a reversal of burden of proof upon the suspect, by presenting itself as an absolute truth, practically depriving the defence of any chance to counter it." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 ;
+    owl:equivalentClass vair:DetectingEmotionalState .
+
+fria:FRIA-reportEvaluation14 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There was no clear explanation provided to customers about who could access their videos and for what purposes." .
+
+fria:FRIA-reportImpactLevel14 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge14 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation14 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel14 ;
+    rdfs:comment "There is no explanation of reasons and criteria behind a certain output of the AI system that the user can understand." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 .
+
+fria:FRIA-reportEvaluation15 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The extent to which employee access to videos could impact customer privacy was not clearly communicated." .
+
+fria:FRIA-reportImpactLevel15 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge15 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation15 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel15 ;
+    rdfs:comment "There is no indication of the extent to which the AI system influences the overall decision-making process." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 .
+
+fria:FRIA-reportEvaluation16 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There were no clear measures for redress or compensation for customers whose privacy was violated by employee access to their videos." .
+
+fria:FRIA-reportImpactLevel16 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Very High" .
+
+fria:FRIA-reportChallenge16 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation16 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel16 ;
+    rdfs:comment "There is no set of measures that allow for redress in case of the occurrence of any harm or adverse impact." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 ;
+    owl:equivalentClass vair:InsurancePricing .
+
+fria:FRIA-reportChallenge2 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportChallenge ;
+    rdfs:comment "Right to Right to equality and non-discrimination." .
+
+fria:FRIA-reportEvaluation21 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The incident disproportionately affected female users, with employees specifically targeting videos from women's intimate spaces." .
+
+fria:FRIA-reportImpactLevel21 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Very High" .
+
+fria:FRIA-reportChallenge21 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation21 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel21 ;
+    rdfs:comment "The AI system targets members of a specific social group." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge2 ;
+    owl:equivalentClass airo:PrivateService, vair:ControllingSafetyOfRoadTrafficManagement .
+
+fria:FRIA-reportEvaluation22 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There were no apparent mechanisms to identify and correct biases in employee access or prevent targeting of specific user groups." .
+
+fria:FRIA-reportImpactLevel22 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge22 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation22 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel22 ;
+    rdfs:comment "There are no mechanisms to flag and correct issues related to bias, discrimination, or poor performance." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge2 .
+
+fria:FRIA-reportEvaluation23 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The system did not consider the diverse privacy needs of different user groups, particularly in sensitive areas like bedrooms and bathrooms." .
+
+fria:FRIA-reportImpactLevel23 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge23 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation23 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel23 ;
+    rdfs:comment "The AI system does not consider the diversity and representativeness for specific population or problematic use cases." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge2 .
+
+fria:FRIA-reportChallenge3 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportChallenge ;
+    rdfs:comment "Freedom of expression and information." .
+
+fria:FRIA-reportEvaluation31 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The unrestricted employee access to customer videos could inhibit freedom of expression within private spaces, as users may feel constantly monitored." .
+
+fria:FRIA-reportImpactLevel31 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge31 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation31 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel31 ;
+    rdfs:comment "There is no mechanism to limit the deployment of the AI system to suspected individuals." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge3 .
+
+fria:FRIA-reportEvaluation32 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "Customers did not have easy access to information about how their data was being accessed and used by Ring employees." .
+
+fria:FRIA-reportImpactLevel32 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge32 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation32 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel32 ;
+    rdfs:comment "The data stored, recorded, and produced are not easily accessible to concerned individuals." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge3 .
+
+fria:FRIA-reportChallenge4 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportChallenge ;
+    rdfs:comment "Right to respect for private and family life and right to protection of personal data." .
+
+fria:FRIA-reportEvaluation41 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "Ring allowed unrestricted employee access to customer videos without user consent or knowledge, severely violating privacy rights." .
+
+fria:FRIA-reportImpactLevel41 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Very High" .
+
+fria:FRIA-reportChallenge41 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation41 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel41 ;
+    rdfs:comment "There are no mechanisms for the user to exercise control over the processing of personal data." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 .
+
+fria:FRIA-reportEvaluation42 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The lawfulness of Ring's data handling practices, including unrestricted employee access to customer videos, is questionable under privacy laws." .
+
+fria:FRIA-reportImpactLevel42 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Very High" .
+
+fria:FRIA-reportChallenge42 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation42 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel42 ;
+    rdfs:comment "There are no measures to ensure the lawfulness of the processing of personal data." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass airo:PublicService .
+
+fria:FRIA-reportEvaluation43 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There were no clear procedures to limit access to customer videos to only necessary parties and purposes, allowing broad and unnecessary employee access." .
+
+fria:FRIA-reportImpactLevel43 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Very High" .
+
+fria:FRIA-reportChallenge43 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation43 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel43 ;
+    rdfs:comment "There are no procedures to limit the access to personal data and to the extent and amount necessary for those purposes." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass airo:Managing .
+
+fria:FRIA-reportEvaluation44 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "Customers had no mechanism to access, rectify, or erase their personal data that was being viewed by Ring employees." .
+
+fria:FRIA-reportImpactLevel44 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge44 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation44 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel44 ;
+    rdfs:comment "There is no mechanism allowing to comply with the exercise of data subject's rights (access, rectification and erasure of data relating to a specific individual)." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 .
+
+fria:FRIA-reportEvaluation45 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "Ring failed to implement basic security measures to protect customer data from unauthorized employee access and potential external threats." .
+
+fria:FRIA-reportImpactLevel45 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Very High" .
+
+fria:FRIA-reportChallenge45 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation45 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel45 ;
+    rdfs:comment "There are no specific measures in place to enhance the security of the processing of personal data (via encryption, anonymisation and aggregation)." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass vair:ApplyingTheLawToFacts .
+
+fria:FRIA-reportEvaluation46 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There is no indication that Ring conducted a comprehensive data protection impact assessment before allowing such broad employee access to customer videos." .
+
+fria:FRIA-reportImpactLevel46 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Very High" .
+
+fria:FRIA-reportChallenge46 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation46 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel46 ;
+    rdfs:comment "There is no procedure to conduct a data protection impact assessment." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass airo:Monitoring .

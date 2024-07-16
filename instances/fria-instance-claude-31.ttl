@@ -1,0 +1,171 @@
+@prefix fria: <http://www.example.org/fria-report> .
+@prefix airo: <https://w3id.org/airo#> .
+@prefix vair: <https://w3id.org/vair#> .
+@prefix cids: <http://www.example.org/cids#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Basic Things
+fria:Amazon-Algorithms-Promote-Vaccine-Misinformation-Report a fria:FRIA-report ;
+    fria:hasReportName "Amazon algorithms promote vaccine misinformation" ;
+    fria:hasOrganisationPositionDescription "Content recommendation system" ;
+    fria:hasContributorDetails "Amazon, Waterstones, Foyles" ;
+    fria:hasAssessmentContent "Amazon's recommendation algorithms promote anti-vaccination and health misinformation books, apparel, and other products. The system pushes users interested in these products towards more related products, creating a 'filter bubble' effect." ;
+    fria:hasTechnologyAndDataDescription "Content recommendation system using algorithms based on user behavior and product attributes." ;
+    fria:hasPurposesAndContextDescription "Recommend content and products to users based on their search queries and browsing history." ;
+    fria:reportDate "2023-07-11"^^xsd:date ;
+    fria:hasAIAAICLink "https://www.aiaaic.org/aiaaic-repository/ai-algorithmic-and-automation-incidents/amazon-algorithms-promote-vaccine-misinformation" .
+
+# Challenge 1
+fria:FRIA-reportChallenge1 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportChallenge ;
+    rdfs:comment "Presumption of innocence and right to an effective remedy and to a fair trial." .
+
+fria:FRIA-reportEvaluation11 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The AI system does not communicate that recommendations are the result of algorithmic decisions. It presents anti-vaccination books and products without clear indication of their controversial nature or potential misinformation." .
+
+fria:FRIA-reportImpactLevel11 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge11 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation11 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel11 ;
+    rdfs:comment "The AI system does not communicate that a decision/advice or outcome is the result of an algorithmic decision." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge1 ;
+    owl:equivalentClass airo:Transparency, vair:OperatingCriticalDigitalInfrastructure .
+
+# Challenge 2
+fria:FRIA-reportChallenge2 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportChallenge ;
+    rdfs:comment "Right to equality and non-discrimination." .
+
+fria:FRIA-reportEvaluation23 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The AI system does not consider the diversity and representativeness of the population. It promotes anti-vaccination content that can disproportionately affect vulnerable groups or those seeking accurate health information." .
+
+fria:FRIA-reportImpactLevel23 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge23 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation23 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel23 ;
+    rdfs:comment "The AI system does not consider the diversity and representativeness for specific population or problematic use cases." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge2 .
+
+# Challenge 3
+fria:FRIA-reportChallenge3 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportChallenge ;
+    rdfs:comment "Freedom of expression and information." .
+
+fria:FRIA-reportEvaluation31 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The system's recommendations of anti-vaccination and health misinformation books may interfere with the right to receive accurate information, potentially impacting public health decisions." .
+
+fria:FRIA-reportImpactLevel31 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge31 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation31 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel31 ;
+    rdfs:comment "There is no mechanism to limit the deployment of the AI system to suspected individuals." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge3 .
+
+# Challenge 4
+fria:FRIA-reportChallenge4 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportChallenge ;
+    rdfs:comment "Right to respect for private and family life and right to protection of personal data." .
+
+fria:FRIA-reportEvaluation41 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The AI system uses personal data to create personalized recommendations, potentially creating 'filter bubbles' that reinforce misinformation. There's no clear mechanism for users to control or understand how their data is being used to generate these recommendations." .
+
+fria:FRIA-reportImpactLevel41 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Medium" .
+
+fria:FRIA-reportChallenge41 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation41 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel41 ;
+    rdfs:comment "There are no mechanisms for the user to exercise control over the processing of personal data." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 .
+
+# Challenge 4 (continued)
+fria:FRIA-reportEvaluation42 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There are no clear measures to ensure the lawfulness of the processing of personal data for recommendation purposes. The system uses user data to create personalized recommendations without explicit consent for this use." .
+
+fria:FRIA-reportImpactLevel42 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge42 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation42 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel42 ;
+    rdfs:comment "There are no measures to ensure the lawfulness of the processing of personal data." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass airo:PublicService .
+
+fria:FRIA-reportEvaluation43 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The system lacks clear procedures to limit access to personal data used for recommendations. It's unclear how Amazon restricts access to user data within its organization or with third-party sellers." .
+
+fria:FRIA-reportImpactLevel43 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Medium" .
+
+fria:FRIA-reportChallenge43 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation43 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel43 ;
+    rdfs:comment "There are no procedures to limit the access to personal data and to the extent and amount necessary for those purposes." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass airo:Managing .
+
+fria:FRIA-reportEvaluation44 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The system doesn't provide a clear mechanism for users to access, rectify, or erase their data related to the recommendation algorithm. Users have limited control over how their data influences book recommendations." .
+
+fria:FRIA-reportImpactLevel44 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge44 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation44 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel44 ;
+    rdfs:comment "There is no mechanism allowing to comply with the exercise of data subject's rights (access, rectification and erasure of data relating to a specific individual)." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 .
+
+fria:FRIA-reportEvaluation45 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "The report doesn't mention any specific measures to enhance the security of personal data processing in the recommendation system. It's unclear if Amazon employs encryption, anonymization, or aggregation techniques for user data used in the algorithm." .
+
+fria:FRIA-reportImpactLevel45 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "Medium" .
+
+fria:FRIA-reportChallenge45 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation45 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel45 ;
+    rdfs:comment "There are no specific measures in place to enhance the security of the processing of personal data (via encryption, anonymisation and aggregation)." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass vair:ApplyingTheLawToFacts .
+
+fria:FRIA-reportEvaluation46 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportEvaluation ;
+    fria:hasEvaluationContent "There's no mention of a data protection impact assessment for the recommendation system. Given the potential risks of promoting misinformation, such an assessment would be crucial." .
+
+fria:FRIA-reportImpactLevel46 a rdfs:Class ;
+    rdfs:subClassOf fria:FRIA-reportImpactLevel ;
+    fria:hasImpactLevelContent "High" .
+
+fria:FRIA-reportChallenge46 a rdfs:Class ;
+    fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation46 ;
+    fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel46 ;
+    rdfs:comment "There is no procedure to conduct a data protection impact assessment." ;
+    rdfs:subClassOf fria:FRIA-reportChallenge4 ;
+    owl:equivalentClass airo:Monitoring .
