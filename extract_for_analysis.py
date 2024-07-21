@@ -178,6 +178,11 @@ gpt_df = pd.DataFrame(gpt_data)
 # claude_df.drop(columns=columns_to_drop, inplace=True)
 # gpt_df.drop(columns=columns_to_drop, inplace=True)
 
+# 将challenge列中的值限制在0到1之间
+challenge_columns = [col for col in claude_df.columns if col.startswith('challenge_')]
+claude_df[challenge_columns] = claude_df[challenge_columns].clip(lower=0, upper=1)
+gpt_df[challenge_columns] = gpt_df[challenge_columns].clip(lower=0, upper=1)
+
 # 保存为CSV文件
 claude_output_file = "claude_to_analysis_data_s.csv"
 gpt_output_file = "gpt_to_analysis_data_s.csv"
