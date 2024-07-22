@@ -4,13 +4,13 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-# 定义目录路径和文件名模式
+# Define the directory and file patterns
 directory = "./instances"
 claude_file_pattern = "fria-instance-claude-"
 gpt_file_pattern = "fria-instance-gpt-"
 file_indices = range(1, 51)
 
-# 初始化数据字典
+# Initialize the data dictionary
 def initialize_data_dict():
     data_dict = {
         "file_name": [],
@@ -33,7 +33,7 @@ def initialize_data_dict():
 claude_data = initialize_data_dict()
 gpt_data = initialize_data_dict()
 
-# 定义正则表达式模式
+# Define the regular expressions for extracting information
 basic_things_patterns = {
     "report_name": re.compile(r'fria:hasReportName "(.*?)" ;'),
     "organisation_description": re.compile(r'fria:hasOrganisationPositionDescription "(.*?)" ;'),
@@ -51,11 +51,11 @@ challenge_pattern = re.compile(
 evaluation_pattern = re.compile(r'fria:hasEvaluationContent "(.*?)" \.', re.DOTALL)
 impact_level_pattern = re.compile(r'fria:hasImpactLevelContent "(.*?)" \.', re.DOTALL)
 
-# 检查默认内容
+# Check if the text contains default content
 def is_default_content(text, default_keywords):
     return any(keyword in text for keyword in default_keywords)
 
-# 计算文本相似性
+# Calculate the similarity between two texts
 def compute_similarity(text, reference_text):
     if text is None or reference_text is None:
         return 0
@@ -64,7 +64,7 @@ def compute_similarity(text, reference_text):
     cosine_sim = cosine_similarity(vectors)
     return cosine_sim[0, 1]
 
-# 定义函数提取信息并计算相似性得分
+# Define the function to extract information(scores for frequency analysis)
 def extract_information(content, reference_texts):
     default_keywords = ["evaluation content", "impact level content"]
     extracted_info = {key: None for key in basic_things_patterns.keys()}
@@ -107,7 +107,7 @@ def extract_information(content, reference_texts):
 
     return extracted_info
 
-# 定义参考文本
+# Reference texts for the challenges
 reference_texts = {
     "challenge_11": "The AI system does not communicate that a decision/advice or outcome is the result of an algorithmic decision.",
     "challenge_12": "The AI system does not provide percentages or other indication on the degree of likelihood that the outcome is correct/incorrect, prejudicing the user that there is no possibility of error and therefore that the outcome is undoubtedly incriminating.",
@@ -129,7 +129,7 @@ reference_texts = {
     # Add additional reference texts as needed...
 }
 
-# 处理文件并提取信息
+# Process the files
 for pattern, data_dict in [(claude_file_pattern, claude_data), (gpt_file_pattern, gpt_data)]:
     for i in file_indices:
         file_name = f"{pattern}{i}.ttl"
@@ -152,22 +152,22 @@ for pattern, data_dict in [(claude_file_pattern, claude_data), (gpt_file_pattern
                 data_dict[f"evaluation_{i}{j}"].append(extracted_info[f"evaluation_{i}{j}"])
                 data_dict[f"impact_level_{i}{j}"].append(extracted_info[f"impact_level_{i}{j}"])
 
-# 确保所有列表长度一致
+# Make sure all lists have the same length
 def ensure_list_lengths(data_dict):
     max_length = max(len(lst) for lst in data_dict.values())
     for key in data_dict:
         while len(data_dict[key]) < max_length:
             data_dict[key].append(None)
 
-# 确保数据字典中的所有列表长度一致
+# Make sure all lists have the same length
 ensure_list_lengths(claude_data)
 ensure_list_lengths(gpt_data)
 
-# 转换为DataFrame
+# Transform the data into DataFrames
 claude_df = pd.DataFrame(claude_data)
 gpt_df = pd.DataFrame(gpt_data)
 
-# # 删除指定的无用列
+# # Delete the columns that are not needed
 # columns_to_drop = [
 #     "challenge_1", "evaluation_1", "impact_level_1",
 #     "challenge_2", "evaluation_2", "impact_level_2",
@@ -178,18 +178,18 @@ gpt_df = pd.DataFrame(gpt_data)
 # claude_df.drop(columns=columns_to_drop, inplace=True)
 # gpt_df.drop(columns=columns_to_drop, inplace=True)
 
-# 将challenge列中的值限制在0到1之间
+# Clip the challenge columns to the range [0, 1]
 challenge_columns = [col for col in claude_df.columns if col.startswith('challenge_')]
 claude_df[challenge_columns] = claude_df[challenge_columns].clip(lower=0, upper=1)
 gpt_df[challenge_columns] = gpt_df[challenge_columns].clip(lower=0, upper=1)
 
-# 保存为CSV文件
+# Save the DataFrames to CSV files
 claude_output_file = "claude_to_analysis_data_s.csv"
 gpt_output_file = "gpt_to_analysis_data_s.csv"
 claude_df.to_csv(claude_output_file, index=False)
 gpt_df.to_csv(gpt_output_file, index=False)
 
-# 打印DataFrame
+# Print Resultsf
 print("Claude DataFrame:")
 print(claude_df)
 print("\nGPT DataFrame:")

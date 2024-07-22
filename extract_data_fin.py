@@ -2,14 +2,14 @@ import os
 import re
 import pandas as pd
 
-# 定义目录路径和文件名模式
+# Define the directory and file patterns
 directory = "./instances"
 claude_file_pattern = "fria-instance-claude-"
 gpt_file_pattern = "fria-instance-gpt-"
 file_indices = range(1, 51)
 
 
-# 初始化数据字典
+# Initialize the data dictionary
 def initialize_data_dict():
     data_dict = {
         "file_name": [],
@@ -36,7 +36,7 @@ def initialize_data_dict():
 claude_data = initialize_data_dict()
 gpt_data = initialize_data_dict()
 
-# 定义正则表达式模式
+# Define the regular expressions for extracting information
 basic_things_patterns = {
     "report_name": re.compile(r'fria:hasReportName "(.*?)" ;'),
     "organisation_description": re.compile(r'fria:hasOrganisationPositionDescription "(.*?)" ;'),
@@ -55,7 +55,7 @@ evaluation_pattern = re.compile(r'fria:hasEvaluationContent "(.*?)" \.', re.DOTA
 impact_level_pattern = re.compile(r'fria:hasImpactLevelContent "(.*?)" \.', re.DOTALL)
 
 
-# 定义函数提取信息
+# Define the function to extract information
 def extract_information(content):
     extracted_info = {key: None for key in basic_things_patterns.keys()}
     for key, pattern in basic_things_patterns.items():
@@ -95,7 +95,7 @@ def extract_information(content):
     return extracted_info
 
 
-# 处理文件并提取信息
+# Process the files
 for pattern, data_dict in [(claude_file_pattern, claude_data), (gpt_file_pattern, gpt_data)]:
     for i in file_indices:
         file_name = f"{pattern}{i}.ttl"
@@ -121,11 +121,11 @@ for pattern, data_dict in [(claude_file_pattern, claude_data), (gpt_file_pattern
                 data_dict[f"evaluation_{i}{j}"].append(extracted_info[f"evaluation_{i}{j}"])
                 data_dict[f"impact_level_{i}{j}"].append(extracted_info[f"impact_level_{i}{j}"])
 
-# 转换为DataFrame
+# Transform the data into DataFrames
 claude_df = pd.DataFrame(claude_data)
 gpt_df = pd.DataFrame(gpt_data)
 
-#删除指定的无用列
+# Delete the columns that are not needed
 columns_to_drop = [
     "challenge_1", "evaluation_1", "impact_level_1",
     "challenge_2", "evaluation_2", "impact_level_2",
@@ -137,13 +137,13 @@ claude_df.drop(columns=columns_to_drop, inplace=True)
 gpt_df.drop(columns=columns_to_drop, inplace=True)
 
 
-# 保存为CSV文件
+# Save the DataFrames to CSV files
 claude_output_file = "claude_extracted_data.csv"
 gpt_output_file = "gpt_extracted_data.csv"
 claude_df.to_csv(claude_output_file, index=False)
 gpt_df.to_csv(gpt_output_file, index=False)
 
-# 打印DataFrame
+# Print Results
 print("Claude DataFrame:")
 print(claude_df)
 print("\nGPT DataFrame:")
