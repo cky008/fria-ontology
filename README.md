@@ -15,5 +15,32 @@ The evaluation is based on the [```laude_extracted_data.csv```](./claude_extract
 ![average_similarity_heatmaps.png](./average_similarity_heatmaps.png)
 ![average_similarity_by_incident.png](./average_similarity_by_incident.png)
 
+GraphDB repo configuration is in file [```FRIA-config.ttl```](./FRIA-config.ttl).  
+
+![class-hierarchy-FRIA](./assets/class-hierarchy-FRIA-1685396.svg)
+
+![dependencies-FRIA](./assets/CleanShot%202024-07-22%20at%2022.41.45@2x.png)
+
+![CleanShot 2024-07-22 at 22.42.35@2x](./assets/CleanShot%202024-07-22%20at%2022.42.35@2x.png)
+
+![CleanShot 2024-07-22 at 22.44.02@2x](./assets/CleanShot%202024-07-22%20at%2022.44.02@2x.png)
+
+![CleanShot 2024-07-22 at 22.43.26@2x](./assets/CleanShot%202024-07-22%20at%2022.43.26@2x.png)
+
+![CleanShot 2024-07-22 at 22.27.31@2x](./assets/CleanShot%202024-07-22%20at%2022.27.31@2x.png)
+
+![CleanShot 2024-07-22 at 22.23.27@2x](./assets/CleanShot%202024-07-22%20at%2022.23.27@2x.png)
+
+![CleanShot 2024-07-22 at 22.23.07@2x](./assets/CleanShot%202024-07-22%20at%2022.23.07@2x.png)
+
+![CleanShot 2024-07-22 at 22.21.45@2x](./assets/CleanShot%202024-07-22%20at%2022.21.45@2x.png)
+
+![CleanShot 2024-07-22 at 22.17.51@2x](./assets/CleanShot%202024-07-22%20at%2022.17.51@2x.png)
+
+![CleanShot 2024-07-22 at 22.17.13@2x](./assets/CleanShot%202024-07-22%20at%2022.17.13@2x-1685628.png)
+
+![CleanShot 2024-07-22 at 22.06.26@2x](./assets/CleanShot%202024-07-22%20at%2022.06.26@2x-1685634.png)
+
 ## About
+
 This project is my dissertation project for the MSc in Computer Science at Trinity College Dublin. 

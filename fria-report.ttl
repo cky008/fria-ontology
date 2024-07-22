@@ -1,4 +1,4 @@
-@prefix fria: <http://www.example.org/fria-report> .
+@prefix fria: <http://www.example.org/fria-report#> .
 @prefix airo: <https://w3id.org/airo#> .
 @prefix vair: <https://w3id.org/vair#> .
 @prefix cids: <http://www.example.org/cids#> .
@@ -8,12 +8,15 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # Basic Things
+fria:FRIA-report a rdfs:Class ;
+    rdfs:comment "A class representing the FRIA report." .
+
 fria:FRIA-reportName a rdfs:Class ;
     rdfs:comment "A class representing the name of the FRIA report." ;
     owl:equivalentClass cids:hasName, cids:hasDescription .
 
 fria:hasReportName a rdf:Property ;
-    rdfs:domain fria:FRIA-reportName ;
+    rdfs:domain fria:FRIA-report ;
     rdfs:range xsd:string ;
     rdfs:comment "A property to hold the name of the FRIA report." .
 
@@ -75,6 +78,11 @@ fria:hasAIAAICLink a rdf:Property ;
 # Challenge Related
 fria:FRIA-reportChallenge a rdfs:Class ;
     rdfs:comment "A class representing a challenge in the FRIA report." .
+
+fria:FRIA-reporthasChallenge a rdf:Property ;
+    rdfs:domain fria:FRIA-report ;
+    rdfs:range fria:FRIA-reportChallenge ;
+    rdfs:comment "A property linking a FRIA report to its challenges." .
 
 fria:FRIA-reportEvaluation a rdfs:Class ;
     rdfs:comment "A class representing an evaluation of a FRIA report challenge." .
@@ -197,7 +205,7 @@ fria:FRIA-reportChallenge16 a rdfs:Class ;
 # Challenge 2
 fria:FRIA-reportChallenge2 a rdfs:Class ;
     rdfs:subClassOf fria:FRIA-reportChallenge ;
-    rdfs:comment "Right to Right to equality and non-discrimination." .
+    rdfs:comment "Right to equality and non-discrimination." .
 
 fria:FRIA-reportEvaluation21 a rdfs:Class ;
     rdfs:subClassOf fria:FRIA-reportEvaluation ;
@@ -367,4 +375,3 @@ fria:FRIA-reportChallenge46 a rdfs:Class ;
     rdfs:comment "There is no procedure to conduct a data protection impact assessment." ;
     rdfs:subClassOf fria:FRIA-reportChallenge4 ;
     owl:equivalentClass airo:Monitoring .
-    
