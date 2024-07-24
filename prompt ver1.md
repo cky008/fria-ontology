@@ -1,5 +1,5 @@
 ```fria-report.ttl
-@prefix fria: <http://www.example.org/fria-report> .
+@prefix fria: <http://www.example.org/fria-report#> .
 @prefix airo: <https://w3id.org/airo#> .
 @prefix vair: <https://w3id.org/vair#> .
 @prefix cids: <http://www.example.org/cids#> .
@@ -9,12 +9,15 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # Basic Things
+fria:FRIA-report a rdfs:Class ;
+    rdfs:comment "A class representing the FRIA report." .
+
 fria:FRIA-reportName a rdfs:Class ;
     rdfs:comment "A class representing the name of the FRIA report." ;
     owl:equivalentClass cids:hasName, cids:hasDescription .
 
 fria:hasReportName a rdf:Property ;
-    rdfs:domain fria:FRIA-reportName ;
+    rdfs:domain fria:FRIA-report ;
     rdfs:range xsd:string ;
     rdfs:comment "A property to hold the name of the FRIA report." .
 
@@ -77,6 +80,11 @@ fria:hasAIAAICLink a rdf:Property ;
 fria:FRIA-reportChallenge a rdfs:Class ;
     rdfs:comment "A class representing a challenge in the FRIA report." .
 
+fria:FRIA-reporthasChallenge a rdf:Property ;
+    rdfs:domain fria:FRIA-report ;
+    rdfs:range fria:FRIA-reportChallenge ;
+    rdfs:comment "A property linking a FRIA report to its challenges." .
+
 fria:FRIA-reportEvaluation a rdfs:Class ;
     rdfs:comment "A class representing an evaluation of a FRIA report challenge." .
 
@@ -119,7 +127,7 @@ fria:FRIA-reportImpactLevel11 a rdfs:Class ;
 fria:FRIA-reportChallenge11 a rdfs:Class ;
     fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation11 ;
     fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel11 ;
-    rdfs:comment "The AI system does not communicate that a decision/advice or outcome is the result of an algorithmic decision" ;
+    rdfs:comment "The AI system does not communicate that a decision/advice or outcome is the result of an algorithmic decision." ;
     rdfs:subClassOf fria:FRIA-reportChallenge1 ;
     owl:equivalentClass airo:Transparency, vair:OperatingCriticalDigitalInfrastructure .
 
@@ -134,7 +142,7 @@ fria:FRIA-reportImpactLevel12 a rdfs:Class ;
 fria:FRIA-reportChallenge12 a rdfs:Class ;
     fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation12 ;
     fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel12 ;
-    rdfs:comment "The AI system does not provide percentages or other indication on the degree of likelihood that the outcome is correct/incorrect, prejudicing the user that there is no possibility of error and therefore that the outcome is undoubtedly incriminating" ;
+    rdfs:comment "The AI system does not provide percentages or other indication on the degree of likelihood that the outcome is correct/incorrect, prejudicing the user that there is no possibility of error and therefore that the outcome is undoubtedly incriminating." ;
     rdfs:subClassOf fria:FRIA-reportChallenge1 .
 
 fria:FRIA-reportEvaluation13 a rdfs:Class ;
@@ -148,7 +156,7 @@ fria:FRIA-reportImpactLevel13 a rdfs:Class ;
 fria:FRIA-reportChallenge13 a rdfs:Class ;
     fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation13 ;
     fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel13 ;
-    rdfs:comment "The AI system produces an outcome that forces a reversal of burden of proof upon the suspect, by presenting itself as an absolute truth, practically depriving the defence of any chance to counter it" ;
+    rdfs:comment "The AI system produces an outcome that forces a reversal of burden of proof upon the suspect, by presenting itself as an absolute truth, practically depriving the defence of any chance to counter it." ;
     rdfs:subClassOf fria:FRIA-reportChallenge1 ;
     owl:equivalentClass vair:DetectingEmotionalState .
 
@@ -163,7 +171,7 @@ fria:FRIA-reportImpactLevel14 a rdfs:Class ;
 fria:FRIA-reportChallenge14 a rdfs:Class ;
     fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation14 ;
     fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel14 ;
-    rdfs:comment "There is no explanation of reasons and criteria behind a certain output of the AI system that the user can understand" ;
+    rdfs:comment "There is no explanation of reasons and criteria behind a certain output of the AI system that the user can understand." ;
     rdfs:subClassOf fria:FRIA-reportChallenge1 .
 
 fria:FRIA-reportEvaluation15 a rdfs:Class ;
@@ -177,7 +185,7 @@ fria:FRIA-reportImpactLevel15 a rdfs:Class ;
 fria:FRIA-reportChallenge15 a rdfs:Class ;
     fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation15 ;
     fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel15 ;
-    rdfs:comment "There is no indication of the extent to which the AI system influences the overall decision-making process" ;
+    rdfs:comment "There is no indication of the extent to which the AI system influences the overall decision-making process." ;
     rdfs:subClassOf fria:FRIA-reportChallenge1 .
 
 fria:FRIA-reportEvaluation16 a rdfs:Class ;
@@ -191,7 +199,7 @@ fria:FRIA-reportImpactLevel16 a rdfs:Class ;
 fria:FRIA-reportChallenge16 a rdfs:Class ;
     fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation16 ;
     fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel16 ;
-    rdfs:comment "There is no set of measures that allow for redress in case of the occurrence of any harm or adverse impact" ;
+    rdfs:comment "There is no set of measures that allow for redress in case of the occurrence of any harm or adverse impact." ;
     rdfs:subClassOf fria:FRIA-reportChallenge1 ;
     owl:equivalentClass vair:InsurancePricing .
 
@@ -211,7 +219,7 @@ fria:FRIA-reportImpactLevel21 a rdfs:Class ;
 fria:FRIA-reportChallenge21 a rdfs:Class ;
     fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation21 ;
     fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel21 ;
-    rdfs:comment "The AI system targets members of a specific social group" ;
+    rdfs:comment "The AI system targets members of a specific social group." ;
     rdfs:subClassOf fria:FRIA-reportChallenge2 ;
     owl:equivalentClass airo:PrivateService, vair:ControllingSafetyOfRoadTrafficManagement .
 
@@ -226,7 +234,7 @@ fria:FRIA-reportImpactLevel22 a rdfs:Class ;
 fria:FRIA-reportChallenge22 a rdfs:Class ;
     fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation22 ;
     fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel22 ;
-    rdfs:comment "There are no mechanisms to flag and correct issues related to bias, discrimination, or poor performance" ;
+    rdfs:comment "There are no mechanisms to flag and correct issues related to bias, discrimination, or poor performance." ;
     rdfs:subClassOf fria:FRIA-reportChallenge2 .
 
 fria:FRIA-reportEvaluation23 a rdfs:Class ;
@@ -240,7 +248,7 @@ fria:FRIA-reportImpactLevel23 a rdfs:Class ;
 fria:FRIA-reportChallenge23 a rdfs:Class ;
     fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation23 ;
     fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel23 ;
-    rdfs:comment "The AI system does not consider the diversity and representativeness for specific population or problematic use cases" ;
+    rdfs:comment "The AI system does not consider the diversity and representativeness for specific population or problematic use cases." ;
     rdfs:subClassOf fria:FRIA-reportChallenge2 .
 
 # Challenge 3
@@ -259,7 +267,7 @@ fria:FRIA-reportImpactLevel31 a rdfs:Class ;
 fria:FRIA-reportChallenge31 a rdfs:Class ;
     fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation31 ;
     fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel31 ;
-    rdfs:comment "There is no mechanism to limit the deployment of the AI system to suspected individuals" ;
+    rdfs:comment "There is no mechanism to limit the deployment of the AI system to suspected individuals." ;
     rdfs:subClassOf fria:FRIA-reportChallenge3 .
 
 fria:FRIA-reportEvaluation32 a rdfs:Class ;
@@ -273,7 +281,7 @@ fria:FRIA-reportImpactLevel32 a rdfs:Class ;
 fria:FRIA-reportChallenge32 a rdfs:Class ;
     fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation32 ;
     fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel32 ;
-    rdfs:comment "The data stored, recorded, and produced are not easily accessible to concerned individuals" ;
+    rdfs:comment "The data stored, recorded, and produced are not easily accessible to concerned individuals." ;
     rdfs:subClassOf fria:FRIA-reportChallenge3 .
 
 # Challenge 4
@@ -292,7 +300,7 @@ fria:FRIA-reportImpactLevel41 a rdfs:Class ;
 fria:FRIA-reportChallenge41 a rdfs:Class ;
     fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation41 ;
     fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel41 ;
-    rdfs:comment "There are no mechanisms for the user to exercise control over the processing of personal data" ;
+    rdfs:comment "There are no mechanisms for the user to exercise control over the processing of personal data." ;
     rdfs:subClassOf fria:FRIA-reportChallenge4 .
 
 fria:FRIA-reportEvaluation42 a rdfs:Class ;
@@ -306,7 +314,7 @@ fria:FRIA-reportImpactLevel42 a rdfs:Class ;
 fria:FRIA-reportChallenge42 a rdfs:Class ;
     fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation42 ;
     fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel42 ;
-    rdfs:comment "There are no measures to ensure the lawfulness of the processing of personal data" ;
+    rdfs:comment "There are no measures to ensure the lawfulness of the processing of personal data." ;
     rdfs:subClassOf fria:FRIA-reportChallenge4 ;
     owl:equivalentClass airo:PublicService .
 
@@ -321,7 +329,7 @@ fria:FRIA-reportImpactLevel43 a rdfs:Class ;
 fria:FRIA-reportChallenge43 a rdfs:Class ;
     fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation43 ;
     fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel43 ;
-    rdfs:comment "There are no procedures to limit the access to personal data and to the extent and amount necessary for those purposes" ;
+    rdfs:comment "There are no procedures to limit the access to personal data and to the extent and amount necessary for those purposes." ;
     rdfs:subClassOf fria:FRIA-reportChallenge4 ;
     owl:equivalentClass airo:Managing .
 
@@ -336,7 +344,7 @@ fria:FRIA-reportImpactLevel44 a rdfs:Class ;
 fria:FRIA-reportChallenge44 a rdfs:Class ;
     fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation44 ;
     fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel44 ;
-    rdfs:comment "There is no mechanism allowing to comply with the exercise of data subject’s rights (access, rectification and erasure of data relating to a specific individual)" ;
+    rdfs:comment "There is no mechanism allowing to comply with the exercise of data subject’s rights (access, rectification and erasure of data relating to a specific individual)." ;
     rdfs:subClassOf fria:FRIA-reportChallenge4 .
 
 fria:FRIA-reportEvaluation45 a rdfs:Class ;
@@ -350,7 +358,7 @@ fria:FRIA-reportImpactLevel45 a rdfs:Class ;
 fria:FRIA-reportChallenge45 a rdfs:Class ;
     fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation45 ;
     fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel45 ;
-    rdfs:comment "There are no specific measures in place to enhance the security of the processing of personal data (via encryption, anonymisation and aggregation)" ;
+    rdfs:comment "There are no specific measures in place to enhance the security of the processing of personal data (via encryption, anonymisation and aggregation)." ;
     rdfs:subClassOf fria:FRIA-reportChallenge4 ;
     owl:equivalentClass vair:ApplyingTheLawToFacts .
 
@@ -365,7 +373,7 @@ fria:FRIA-reportImpactLevel46 a rdfs:Class ;
 fria:FRIA-reportChallenge46 a rdfs:Class ;
     fria:FRIA-reporthasEvaluation fria:FRIA-reportEvaluation46 ;
     fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel46 ;
-    rdfs:comment "There is no procedure to conduct a data protection impact assessment" ;
+    rdfs:comment "There is no procedure to conduct a data protection impact assessment." ;
     rdfs:subClassOf fria:FRIA-reportChallenge4 ;
     owl:equivalentClass airo:Monitoring .
     
