@@ -129,7 +129,7 @@ fria:FRIA-reportChallenge11 a rdfs:Class ;
     fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel11 ;
     rdfs:comment "The AI system does not communicate that a decision/advice or outcome is the result of an algorithmic decision." ;
     rdfs:subClassOf fria:FRIA-reportChallenge1 ;
-    owl:equivalentClass vair: DecisionMaking .
+    owl:equivalentClass vair: DecisionMaking, vair: Transparency .
 
 fria:FRIA-reportEvaluation12 a rdfs:Class ;
     rdfs:subClassOf fria:FRIA-reportEvaluation ;
