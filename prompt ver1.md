@@ -14,7 +14,7 @@ fria:FRIA-report a rdfs:Class ;
 
 fria:FRIA-reportName a rdfs:Class ;
     rdfs:comment "A class representing the name of the FRIA report." ;
-    owl:equivalentClass cids:hasName, cids:hasDescription .
+    owl:equivalentClass cids: hasName .
 
 fria:hasReportName a rdf:Property ;
     rdfs:domain fria:FRIA-report ;
@@ -39,7 +39,7 @@ fria:hasContributorDetails a rdf:Property ;
 
 fria:FRIA-reportaiSystemAssessed a rdfs:Class ;
     rdfs:comment "A class representing the AI system assessed in the FRIA report." ;
-    owl:equivalentClass cids:hasConsequence, airo:haspurpose, vair:Assessment .
+    owl:equivalentClass cids: hasConsequence, cids: forOutcome, airo: producesOutput, airo: hasConsequence, vair: Assessment, vair: AssessingPeopleRelatedRisk .
 
 fria:hasAssessmentContent a rdf:Property ;
     rdfs:domain fria:FRIA-reportaiSystemAssessed ;
@@ -48,6 +48,7 @@ fria:hasAssessmentContent a rdf:Property ;
 
 fria:FRIA-reporttechnologyAndData a rdfs:Class ;
     rdfs:comment "A class representing the technology and data aspects of the FRIA report." .
+    owl:equivalentClass airo: usesTechnique .
 
 fria:hasTechnologyAndDataDescription a rdf:Property ;
     rdfs:domain fria:FRIA-reporttechnologyAndData ;
@@ -56,7 +57,7 @@ fria:hasTechnologyAndDataDescription a rdf:Property ;
 
 fria:FRIA-reportpurposesAndContext a rdfs:Class ;
     rdfs:comment "A class representing the purposes and context of the FRIA report." ;
-    owl:equivalentClass vair:Purposes .
+    owl:equivalentClass cids: hasDescription, airo: haspurpose, vair: Purposes .
 
 fria:hasPurposesAndContextDescription a rdf:Property ;
     rdfs:domain fria:FRIA-reportpurposesAndContext ;
@@ -129,7 +130,7 @@ fria:FRIA-reportChallenge11 a rdfs:Class ;
     fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel11 ;
     rdfs:comment "The AI system does not communicate that a decision/advice or outcome is the result of an algorithmic decision." ;
     rdfs:subClassOf fria:FRIA-reportChallenge1 ;
-    owl:equivalentClass airo:Transparency, vair:OperatingCriticalDigitalInfrastructure .
+    owl:equivalentClass vair: DecisionMaking, vair: Transparency .
 
 fria:FRIA-reportEvaluation12 a rdfs:Class ;
     rdfs:subClassOf fria:FRIA-reportEvaluation ;
@@ -158,7 +159,6 @@ fria:FRIA-reportChallenge13 a rdfs:Class ;
     fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel13 ;
     rdfs:comment "The AI system produces an outcome that forces a reversal of burden of proof upon the suspect, by presenting itself as an absolute truth, practically depriving the defence of any chance to counter it." ;
     rdfs:subClassOf fria:FRIA-reportChallenge1 ;
-    owl:equivalentClass vair:DetectingEmotionalState .
 
 fria:FRIA-reportEvaluation14 a rdfs:Class ;
     rdfs:subClassOf fria:FRIA-reportEvaluation ;
@@ -201,7 +201,7 @@ fria:FRIA-reportChallenge16 a rdfs:Class ;
     fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel16 ;
     rdfs:comment "There is no set of measures that allow for redress in case of the occurrence of any harm or adverse impact." ;
     rdfs:subClassOf fria:FRIA-reportChallenge1 ;
-    owl:equivalentClass vair:InsurancePricing .
+    owl: equivalentClass cids: hasImportance, cids: intendedimpact, airo: hasRisk, airo: hasSeverity.
 
 # Challenge 2
 fria:FRIA-reportChallenge2 a rdfs:Class ;
@@ -221,7 +221,6 @@ fria:FRIA-reportChallenge21 a rdfs:Class ;
     fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel21 ;
     rdfs:comment "The AI system targets members of a specific social group." ;
     rdfs:subClassOf fria:FRIA-reportChallenge2 ;
-    owl:equivalentClass airo:PrivateService, vair:ControllingSafetyOfRoadTrafficManagement .
 
 fria:FRIA-reportEvaluation22 a rdfs:Class ;
     rdfs:subClassOf fria:FRIA-reportEvaluation ;
@@ -283,6 +282,7 @@ fria:FRIA-reportChallenge32 a rdfs:Class ;
     fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel32 ;
     rdfs:comment "The data stored, recorded, and produced are not easily accessible to concerned individuals." ;
     rdfs:subClassOf fria:FRIA-reportChallenge3 .
+    owl:equivalentClass vair: PublicService .
 
 # Challenge 4
 fria:FRIA-reportChallenge4 a rdfs:Class ;
@@ -316,7 +316,6 @@ fria:FRIA-reportChallenge42 a rdfs:Class ;
     fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel42 ;
     rdfs:comment "There are no measures to ensure the lawfulness of the processing of personal data." ;
     rdfs:subClassOf fria:FRIA-reportChallenge4 ;
-    owl:equivalentClass airo:PublicService .
 
 fria:FRIA-reportEvaluation43 a rdfs:Class ;
     rdfs:subClassOf fria:FRIA-reportEvaluation ;
@@ -360,7 +359,7 @@ fria:FRIA-reportChallenge45 a rdfs:Class ;
     fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel45 ;
     rdfs:comment "There are no specific measures in place to enhance the security of the processing of personal data (via encryption, anonymisation and aggregation)." ;
     rdfs:subClassOf fria:FRIA-reportChallenge4 ;
-    owl:equivalentClass vair:ApplyingTheLawToFacts .
+
 
 fria:FRIA-reportEvaluation46 a rdfs:Class ;
     rdfs:subClassOf fria:FRIA-reportEvaluation ;
@@ -375,7 +374,6 @@ fria:FRIA-reportChallenge46 a rdfs:Class ;
     fria:FRIA-reporthasImpactLevel fria:FRIA-reportImpactLevel46 ;
     rdfs:comment "There is no procedure to conduct a data protection impact assessment." ;
     rdfs:subClassOf fria:FRIA-reportChallenge4 ;
-    owl:equivalentClass airo:Monitoring .
     
 ```
 
