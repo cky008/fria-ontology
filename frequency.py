@@ -64,7 +64,7 @@ ax.set_xticklabels(properties, rotation=90)
 ax.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
 
 plt.tight_layout()
-plt.savefig('combined_annotation_distribution.png')
+plt.savefig('combined_annotation_distribution.pdf')
 plt.show()
 
 # Draw a clearer chart
@@ -83,7 +83,7 @@ ax2.set_ylabel("Frequency")
 ax2.legend(title="Value")
 
 plt.tight_layout()
-plt.savefig('annotation_distribution.png')
+plt.savefig('annotation_distribution.pdf')
 plt.show()
 
 # Heatmap section
@@ -113,7 +113,7 @@ def create_heatmap(value):
     #         label.set_visible(False)
 
     plt.tight_layout()
-    plt.savefig(f'annotation_heatmap_{value}.png', dpi=300, bbox_inches='tight')
+    plt.savefig(f'annotation_heatmap_{value}.pdf', dpi=300, bbox_inches='tight')
     plt.show()
     plt.close()
 

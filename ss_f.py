@@ -69,7 +69,7 @@ axes[1, 1].set_xticklabels(impact_level_cols, rotation=45, ha="right")
 
 # Adjust layout and save plot
 plt.tight_layout(rect=[0, 0, 1, 0.96])
-plt.savefig('average_similarity_scores.png')
+plt.savefig('average_similarity_scores.pdf')
 plt.show()
 
 # Sorting the averages for heatmaps
@@ -104,7 +104,7 @@ axes[1, 1].set_xticklabels(axes[1, 1].get_xticklabels(), rotation=45, ha="right"
 
 # Adjust layout and save plot
 plt.tight_layout(rect=[0, 0, 1, 0.96])
-plt.savefig('average_similarity_heatmaps.png')
+plt.savefig('average_similarity_heatmaps.pdf')
 plt.show()
 
 # Calculate the average similarity score for each incident
@@ -118,5 +118,43 @@ plt.xlabel("Incident")
 plt.ylabel("Average Score")
 plt.grid(True)
 plt.tight_layout()
-plt.savefig('average_similarity_by_incident.png')
+plt.savefig('average_similarity_by_incident.pdf')
+plt.show()
+
+# Plotting the average similarity score by incident (scatter plot)
+plt.figure(figsize=(12, 6))
+plt.scatter(avg_score_by_incident.index, avg_score_by_incident, color='skyblue')
+plt.title("Average Similarity Scores by Incident")
+plt.xlabel("Incident")
+plt.ylabel("Average Score")
+plt.grid(True)
+plt.tight_layout()
+plt.savefig('average_similarity_by_incident_scatter.pdf')
+plt.show()
+
+# Plotting the average similarity score by incident (lollipop chart)
+plt.figure(figsize=(12, 6))
+
+# Draw stem lines
+plt.vlines(x=avg_score_by_incident.index, ymin=0, ymax=avg_score_by_incident.values, color='#8abcd1', alpha=0.7, linewidth=2)
+
+# Draw markers
+plt.scatter(x=avg_score_by_incident.index, y=avg_score_by_incident.values, color='#2f90b9', s=75, zorder=3)
+
+# Add text labels
+for i in range(len(avg_score_by_incident)):
+    plt.text(x=avg_score_by_incident.index[i], y=avg_score_by_incident.values[i] + 0.01,
+             s=f"{avg_score_by_incident.values[i]:.2f}",
+             ha='center', fontsize=6, color='black')
+
+# Customize the plot
+plt.title("Average Similarity Scores by Incident", fontsize=14)
+plt.xlabel("Incident", fontsize=12)
+plt.ylabel("Average Score", fontsize=12)
+plt.grid(True, axis='y', linestyle='--', alpha=0.7)
+plt.xticks(rotation=45)
+plt.tight_layout()
+
+# Save and show the plot
+plt.savefig('average_similarity_by_incident_lollipop.pdf')
 plt.show()
