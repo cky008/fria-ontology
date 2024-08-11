@@ -4,6 +4,9 @@ The source data is from [```ragnarok85's repo```](https://github.com/Julio-Noe/P
 
 The 50 instances generated from Claude 3.5 Sonnet and ChatGPT 4o are in [```instances```](./instances) folder. Those instances are extracted to [```claude_extracted_data.csv```](./claude_extracted_data.csv) and [```gpt_extracted_data.csv```](./gpt_extracted_data.csv) using [```extract_data_fin.py```](./extract_data_fin.py). The  [```claude_to_analysis_data_s.csv```](./claude_to_analysis_data_s.csv), [```gpt_to_analysis_data_s.csv```](./gpt_to_analysis_data_s.csv) are generated using [```extract_for_analysis.py```](./extract_for_analysis.py).
 
+## Design
+![System Figure](./fig/ontology-relationship.drawio.png)
+
 ## Evaluation
 The evaluation is based on the [```claude_extracted_data.csv```](./claude_extracted_data.csv), [```gpt_extracted_data.csv```](./gpt_extracted_data.csv), [```claude_to_analysis_data_s.csv```](./claude_to_analysis_data_s.csv), [```gpt_to_analysis_data_s.csv```](./gpt_to_analysis_data_s.csv) and [```similarity_scores.csv```](./similarity_scores.csv) files. 
 The similarity scores are calculated using [```similarity_scores.py```](./similarity_scores.py). The evaluation figures are generated using [```frequency.py```](./frequency.py) and [```ss_f.py```](./ss_f.py).  
@@ -15,7 +18,7 @@ The similarity scores are calculated using [```similarity_scores.py```](./simila
 ![annotation_heatmap_0.png](./annotation_heatmap_0.png)
 ![average_similarity_scores.png](./average_similarity_scores.png)
 ![average_similarity_heatmaps.png](./average_similarity_heatmaps.png)
-![average_similarity_by_incident.png](./average_similarity_by_incident.png)
+![average_similarity_by_incident.png](./fig/average_similarity_by_incident_lollipop.png)
 
 GraphDB repo configuration is in file [```FRIA-config.ttl```](./FRIA-config.ttl).  
 
